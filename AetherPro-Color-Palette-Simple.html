@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AetherPro Color Palette - Cinematic Industrial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0f0f13;
+            color: #fff;
+            padding: 40px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #EBEBF5;
+        }
+
+        .subtitle {
+            color: #9A9AB0;
+            font-size: 18px;
+            margin-bottom: 48px;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        .color-card {
+            height: 140px;
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .color-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .color-name {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .color-hex {
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            opacity: 0.7;
+            margin-bottom: 4px;
+        }
+
+        .color-usage {
+            font-size: 11px;
+            opacity: 0.6;
+            font-style: italic;
+        }
+
+        .section {
+            background: #1a1a1a;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 32px;
+            border: 1px solid #2a2a35;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #EBEBF5;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-desc {
+            color: #9A9AB0;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .featured {
+            background: linear-gradient(135deg, #2d1b4e 0%, #1a1a24 100%);
+            border: 2px solid #FF6B35;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .featured::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #FF6B35, #7C3AED);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .badge {
+            background: #FF6B35;
+            color: #0B0A10;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .mockup {
+            background: #0B0A10;
+            border-radius: 12px;
+            padding: 32px;
+            border: 1px solid #2a2a35;
+            margin-top: 24px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 48px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #2a2a35;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #EBEBF5;
+            letter-spacing: 0.1em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-link {
+            color: #9A9AB0;
+            font-size: 14px;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: #EBEBF5;
+        }
+
+        .hero-content {
+            margin-bottom: 48px;
+        }
+
+        .badge-text {
+            color: #FF6B35;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+
+        .hero-title {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            color: #EBEBF5;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            color: #9A9AB0;
+            max-width: 600px;
+            margin-bottom: 32px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: #FF6B35;
+            color: #0B0A10;
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #EBEBF5;
+            border: 1px solid #3F3F50;
+        }
+
+        .btn-secondary:hover {
+            border-color: #9A9AB0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 48px;
+        }
+
+        .stat-card {
+            background: #15151E;
+            border: 1px solid #2A2A35;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .stat-label {
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #EBEBF5;
+            margin-bottom: 4px;
+        }
+
+        .stat-desc {
+            font-size: 12px;
+            color: #58586A;
+        }
+
+        .status-purple { color: #7C3AED; }
+        .status-green { color: #10B981; }
+        .status-orange { color: #FF6B35; }
+
+        .copy-toast {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            background: #10B981;
+            color: white;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+            animation: slideIn 0.3s ease;
+            z-index: 1000;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .two-col-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 24px;
+        }
+
+        .copy-btn {
+            background: #FF6B35;
+            color: #0B0A10;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.2s;
+            margin-right: 16px;
+            margin-bottom: 16px;
+        }
+
+        .copy-btn:hover {
+            background: #ff5722;
+            box-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
+        }
+
+        .copy-btn.secondary {
+            background: #7C3AED;
+        }
+
+        .copy-btn.secondary:hover {
+            background: #6d28d9;
+            box-shadow: 0 0 20px rgba(124, 58, 237, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div id="toast" class="copy-toast hidden">Copied to clipboard!</div>
+
+    <div class="container">
+        <h1>AetherPro Color Palette Review</h1>
+        <p class="subtitle">Cinematic Industrial Design System - The Complete Color Reference</p>
+
+        <!-- Featured: Cinematic Industrial -->
+        <div class="section featured">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                <h2 class="section-title">
+                    <span style="width: 16px; height: 16px; background: #FF6B35; border-radius: 50%; display: inline-block; animation: pulse 2s infinite;"></span>
+                    Cinematic Industrial (RECOMMENDED)
+                </h2>
+                <span class="badge">✓ Final Palette</span>
+            </div>
+            <p class="section-desc">The exact colors used in the AetherPro landing page</p>
+            <div class="color-grid">
+                <div class="color-card" onclick="copyColor('#0B0A10')" style="background: #0B0A10;">
+                    <div class="color-name">Deep Void</div>
+                    <div class="color-hex">#0B0A10</div>
+                    <div class="color-usage">Main page background</div>
+                </div>
+                <div class="color-card" onclick="copyColor('#15151E')" style="background: #15151E;">
+                    <div class="color-name">Orbital Grey</div>
+                    <div class="color-hex">#15151E</div>
+                    <div class="color-usage">Cards / Panels</div>
+                </div>
+                <div class="color-card" onclick="copyColor('#232330')" style="background: #232330;">
+                    <div class="color-name">Steel Plate</div>
+                    <div class="color-hex">#232330</div>
+                    <div class="color-usage">Inputs / Elevated surfaces</div>
+                </div>
+                <div class="color-card" onclick="copyColor('#2A2A35')" style="background: #2A2A35;">
+                    <div class="color-name">Border Dim</div>
+                    <div class="color-hex">#2A2A35</div>
+                    <div class="color-usage">Subtle borders</div>
+                </div>
+                <div class="color-card" onclick="copyColor('#3F3F50')" style="background: #3F3F50;">
+                    <div class="color-name">Border Bright</div>
+                    <div class="color-hex">#3F3F50</div>
+                    <div class="color-usage">Active borders</div>
+                </div>
+                <div class="color-card" onclick="copyColor('#FF6B35')" style="background: #FF6B35;">
+                    <div class="color-name">High Voltage</div>
+                    <div class="color-hex">#FF6B35</div>
+                    <div class="color-usage">Primary CTA / Critical alerts</div>
+                </div>
+                <div class="color-card" onclick="copyColor('rgba(255, 107, 53, 0.15)')" style="background: rgba(255, 107, 53, 0.15);">
+                    <div class="color-name">Voltage Dim</div>
+                    <div class="color-hex">rgba(255, 107, 53, 0.15)</div>
+                    <div class="color-usage">Subtle highlights (15% opacity)</div>
+                </div>
+                <div class="color-card" onclick="copyColor('rgba(255, 107, 53, 0.4)')" style="background: rgba(255, 107, 53, 0.4);">
+                    <div class="color-name">Voltage Glow</div>
+                    <div class="color-hex">rgba(255, 107, 53, 0.4)</div>
+                    <div class="color-usage">Hover states (40% opacity)</div>
+                </div>
+                <div class="color-card" onclick="copyColor('#7C3AED')" style="background: #7C3AED;">
+                    <div class="color-name">Aether Beam</div>
+                    <div class="color-hex">#7C3AED</div>
+                    <div class="color-usage">Secondary accent / Thinking states</div>
+                </div>
+                <div class="color-card" onclick="copyColor('#EBEBF5')" style="background: #EBEBF5;">
+                    <div class="color-name">Plasma White</div>
+                    <div class="color-hex">#EBEBF5</div>
+                    <div class="color-usage">Primary text / Headings</div>
+                </div>
+                <div class="color-card" onclick="copyColor('#9A9AB0')" style="background: #9A9AB0;">
+                    <div class="color-name">Muted Signal</div>
+                    <div class="color-hex">#9A9AB0</div>
+                    <div class="color-usage">Secondary text / Specs</div>
+                </div>
+                <div class="color-card" onclick="copyColor('#58586A')" style="background: #58586A;">
+                    <div class="color-name">Text Dark</div>
+                    <div class="color-hex">#58586A</div>
+                    <div class="color-usage">Placeholders / Disabled</div>
+                </div>
+                <div class="color-card" onclick="copyColor('#10B981')" style="background: #10B981;">
+                    <div class="color-name">Status Active</div>
+                    <div class="color-hex">#10B981</div>
+                    <div class="color-usage">Systems online</div>
+                </div>
+                <div class="color-card" onclick="copyColor('#FF4444')" style="background: #FF4444;">
+                    <div class="color-name">Status Critical</div>
+                    <div class="color-hex">#FF4444</div>
+                    <div class="color-usage">System failure</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Preview -->
+        <div class="section">
+            <h2 class="section-title">Live Preview: How The Colors Work Together</h2>
+            <p class="section-desc">See the Cinematic Industrial palette in action</p>
+
+            <div class="mockup">
+                <div class="nav">
+                    <div class="logo">AETHERPRO</div>
+                    <div class="nav-links">
+                        <a href="#" class="nav-link">Platform</a>
+                        <a href="#" class="nav-link">Infrastructure</a>
+                        <a href="#" class="nav-link">Defense</a>
+                    </div>
+                </div>
+
+                <div class="hero-content">
+                    <div class="badge-text">SOVEREIGN AI INFRASTRUCTURE</div>
+                    <h1 class="hero-title">Enterprise-Grade AI<br>Built on Physical Infrastructure</h1>
+                    <p class="hero-subtitle">CMMC 2.0 compliant sovereign AI for defense contractors. Self-hosted intelligence on dedicated hardware you control.</p>
+                    <div class="buttons">
+                        <button class="btn btn-primary">REQUEST ACCESS</button>
+                        <button class="btn btn-secondary">VIEW ARCHITECTURE</button>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label status-purple">● MODELS</div>
+                        <div class="stat-value">359+</div>
+                        <div class="stat-desc">Self-hosted instances</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label status-green">● UPTIME</div>
+                        <div class="stat-value">99.97%</div>
+                        <div class="stat-desc">L40S GPU cluster</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label status-orange">● LATENCY</div>
+                        <div class="stat-value">&lt;45ms</div>
+                        <div class="stat-desc">Avg. response time</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copy Actions -->
+        <div class="section">
+            <h2 class="section-title">Copy Color Variables</h2>
+            <p class="section-desc">Get the exact CSS variables or full brand guide</p>
+
+            <button class="copy-btn" onclick="copyCSS()">📋 Copy CSS Variables</button>
+            <button class="copy-btn secondary" onclick="copyBrandGuide()">📄 Copy Brand Guide</button>
+        </div>
+
+        <!-- Why This Wins -->
+        <div class="section">
+            <h2 class="section-title">⚡ Why "Cinematic Industrial" Wins</h2>
+            <p class="section-desc">The strategic reasoning behind these colors</p>
+
+            <div style="display: grid; gap: 20px;">
+                <div style="background: rgba(255, 107, 53, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #FF6B35;">
+                    <h3 style="color: #FF6B35; margin-bottom: 12px; font-weight: 700;">🔥 The Electrician's Moat</h3>
+                    <ul style="color: #9A9AB0; font-size: 14px; line-height: 1.8; margin-left: 20px;">
+                        <li><strong style="color: #EBEBF5;">Orange = High Voltage Warning</strong> - International electrical safety color</li>
+                        <li><strong style="color: #EBEBF5;">Deep Void = Server Racks</strong> - Physical infrastructure reality</li>
+                        <li><strong style="color: #EBEBF5;">Matte Finishes = Industrial Grade</strong> - Not consumer software, not toys</li>
+                        <li><strong style="color: #EBEBF5;">Monospace Typography</strong> - Engineering precision, developer credibility</li>
+                    </ul>
+                </div>
+
+                <div style="background: rgba(220, 38, 38, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #DC2626;">
+                    <h3 style="color: #DC2626; margin-bottom: 12px; font-weight: 700;">❌ Why Blue Failed</h3>
+                    <ul style="color: #9A9AB0; font-size: 14px; line-height: 1.8; margin-left: 20px;">
+                        <li><strong style="color: #EBEBF5;">#1E90FF</strong> = Generic SaaS (Salesforce, Microsoft, WordPress)</li>
+                        <li>Signals "software wrapper" not "sovereign infrastructure"</li>
+                        <li>Zero differentiation in a sea of blue AI tools</li>
+                        <li>Doesn't leverage your physical hardware background</li>
+                    </ul>
+                </div>
+
+                <div style="background: rgba(124, 58, 237, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #7C3AED;">
+                    <h3 style="color: #7C3AED; margin-bottom: 12px; font-weight: 700;">🎯 Target Market Alignment</h3>
+                    <ul style="color: #9A9AB0; font-size: 14px; line-height: 1.8; margin-left: 20px;">
+                        <li><strong style="color: #EBEBF5;">Defense Contractors:</strong> Need to see "industrial strength" not "startup vibes"</li>
+                        <li><strong style="color: #EBEBF5;">CMMC 2.0 Enterprises:</strong> Trust physical infrastructure operators over API resellers</li>
+                        <li><strong style="color: #EBEBF5;">Sovereign AI Buyers:</strong> Want vendor who understands hardware at electrical level</li>
+                        <li><strong style="color: #EBEBF5;">Visual Peers:</strong> Palantir, Anduril, Databricks - not Notion or Linear</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; color: #58586A; font-size: 12px; margin-top: 48px; padding: 24px;">
+            AetherPro Color Palette © 2024 | Built for Sovereign AI Infrastructure
+        </div>
+    </div>
+
+    <script>
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 2000);
+        }
+
+        function copyColor(color) {
+            navigator.clipboard.writeText(color);
+            showToast('Copied ' + color + ' to clipboard!');
+        }
+
+        function copyCSS() {
+            const css = `:root {
+  /* BACKGROUNDS - The Industrial Void */
+  --bg-void: #0B0A10;
+  --bg-orbital: #15151E;
+  --bg-steel: #232330;
+
+  /* BORDERS - Mechanical Precision */
+  --border-dim: #2A2A35;
+  --border-bright: #3F3F50;
+
+  /* ACCENTS - High Voltage */
+  --accent-voltage: #FF6B35;
+  --accent-voltage-dim: rgba(255, 107, 53, 0.15);
+  --accent-voltage-glow: rgba(255, 107, 53, 0.4);
+
+  /* INTELLIGENCE - The Aether */
+  --signal-beam: #7C3AED;
+
+  /* TEXT - Legibility First */
+  --text-plasma: #EBEBF5;
+  --text-muted: #9A9AB0;
+  --text-dark: #58586A;
+
+  /* STATUS */
+  --status-active: #10B981;
+  --status-crit: #FF4444;
+}`;
+            navigator.clipboard.writeText(css);
+            showToast('CSS Variables copied to clipboard!');
+        }
+
+        function copyBrandGuide() {
+            const guide = `AetherPro Brand Guidelines - Cinematic Industrial
+
+STRATEGIC POSITION
+"Sovereign AI Infrastructure Built by a Master Electrician"
+
+AetherPro is not software - it's physical infrastructure for AI. We compete with Palantir, Anduril, and Databricks on industrial strength.
+
+COLOR PALETTE: "Cinematic Industrial"
+
+The Void (Backgrounds)
+• Deep Void: #0B0A10 - Main page background
+• Orbital Grey: #15151E - Card/panel backgrounds
+• Steel Plate: #232330 - Input fields/elevated surfaces
+
+The Power (Accents)
+• High Voltage: #FF6B35 - Primary CTA, critical alerts
+  - International electrical warning color
+  - Use SPARINGLY for maximum impact
+• Voltage Dim: rgba(255, 107, 53, 0.15) - Subtle highlights
+• Voltage Glow: rgba(255, 107, 53, 0.4) - Hover states
+
+The Signal (Intelligence)
+• Aether Beam: #7C3AED - Secondary accent for thinking/loading states
+
+Text (Legibility First)
+• Plasma White: #EBEBF5 - Primary text/headings
+• Muted Signal: #9A9AB0 - Secondary text/technical specs
+• Text Dark: #58586A - Placeholders/disabled states
+
+TYPOGRAPHY
+• Headings: Inter Bold, Color: Plasma White
+• Body: Inter Regular, Color: Muted Signal
+• Technical: JetBrains Mono for specs/numbers
+
+VISUAL RULES
+NEVER: Gradients on text, heavy shadows, multiple competing accents
+ALWAYS: Matte finishes, high contrast, generous whitespace, monospace for technical data
+
+COMPETITIVE POSITIONING
+We look like: Palantir, Anduril, Databricks, Linear
+We don't look like: Notion, Figma, Webflow, Crypto projects
+
+© 2024 AetherPro Technologies LLC`;
+            navigator.clipboard.writeText(guide);
+            showToast('Brand Guide copied to clipboard!');
+        }
+    </script>
+</body>
+</html>

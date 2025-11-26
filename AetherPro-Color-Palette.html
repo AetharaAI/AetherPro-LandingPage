@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AetherPro Color Palette - Cinematic Industrial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            /* Cinematic Industrial Palette */
+            --bg-void: #0B0A10;
+            --bg-orbital: #15151E;
+            --bg-steel: #232330;
+            --border-dim: #2A2A35;
+            --border-bright: #3F3F50;
+            --accent-voltage: #FF6B35;
+            --accent-voltage-dim: rgba(255, 107, 53, 0.15);
+            --accent-voltage-glow: rgba(255, 107, 53, 0.4);
+            --signal-beam: #7C3AED;
+            --text-plasma: #EBEBF5;
+            --text-muted: #9A9AB0;
+            --text-dark: #58586A;
+            --status-active: #10B981;
+            --status-crit: #FF4444;
+        }
+
+        body {
+            background-color: #0f0f13;
+        }
+
+        .color-card {
+            transition: all 0.3s ease;
+        }
+
+        .color-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+        }
+
+        .copy-toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #10B981;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div id="copyToast" class="copy-toast hidden">Copied to clipboard!</div>
+
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-8">
+            <h1 class="text-4xl font-bold text-white mb-2">AetherPro Color Palette Review</h1>
+            <p class="text-gray-400">Compare and finalize colors before full landing page build</p>
+        </div>
+
+        <!-- Industrial Palette - FEATURED -->
+        <div class="bg-gradient-to-br from-purple-950 to-gray-900 rounded-2xl p-8 border-2 border-orange-500/50 shadow-2xl mb-8">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-3xl font-bold text-white flex items-center gap-3">
+                    <span class="w-4 h-4 bg-orange-500 rounded-full animate-pulse"></span>
+                    Cinematic Industrial (RECOMMENDED)
+                </h3>
+                <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                    FINAL
+                </span>
+            </div>
+            <p class="text-gray-300 text-sm mb-6">Sovereign Infrastructure Palette - Used in AetherPro Landing</p>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3" id="industrialColors"></div>
+        </div>
+
+        <!-- Other Palettes -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <!-- Landing Page Colors -->
+            <div class="bg-gray-900 rounded-2xl p-6 border border-gray-800 opacity-60">
+                <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                    <span class="w-3 h-3 bg-blue-500 rounded-full"></span>
+                    Landing Page Palette
+                </h3>
+                <p class="text-gray-400 text-sm mb-6">Original global.css - Generic SaaS</p>
+                <div class="grid grid-cols-2 gap-4" id="landingColors"></div>
+            </div>
+
+            <!-- Brand/Logo Colors -->
+            <div class="bg-gray-900 rounded-2xl p-6 border border-gray-800 opacity-60">
+                <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                    <span class="w-3 h-3 bg-orange-500 rounded-full"></span>
+                    Brand Logo Palette
+                </h3>
+                <p class="text-gray-400 text-sm mb-6">Original BRAND.md - Starting point</p>
+                <div class="grid grid-cols-1 gap-4" id="brandColors"></div>
+            </div>
+        </div>
+
+        <!-- Live Preview -->
+        <div class="bg-gray-900 rounded-2xl p-6 border border-gray-800 mb-8">
+            <h3 class="text-2xl font-bold text-white mb-6">Live Preview: Cinematic Industrial</h3>
+
+            <div class="space-y-6">
+                <!-- Hero Mockup -->
+                <div style="background-color: var(--bg-void)" class="rounded-xl p-8 border border-gray-800">
+                    <div class="max-w-4xl">
+                        <!-- Navigation -->
+                        <div class="flex items-center justify-between mb-12">
+                            <div style="color: var(--text-plasma)" class="text-2xl font-bold tracking-tight">
+                                AETHERPRO
+                            </div>
+                            <div class="flex gap-6">
+                                <span style="color: var(--text-muted)" class="text-sm font-medium cursor-pointer hover:text-white transition-colors">Platform</span>
+                                <span style="color: var(--text-muted)" class="text-sm font-medium cursor-pointer hover:text-white transition-colors">Infrastructure</span>
+                                <span style="color: var(--text-muted)" class="text-sm font-medium cursor-pointer hover:text-white transition-colors">Defense</span>
+                            </div>
+                        </div>
+
+                        <!-- Hero Content -->
+                        <div class="mb-8">
+                            <div style="color: var(--accent-voltage)" class="text-xs font-mono mb-4 tracking-wider">
+                                SOVEREIGN AI INFRASTRUCTURE
+                            </div>
+                            <h1 style="color: var(--text-plasma)" class="text-5xl font-bold mb-4 leading-tight">
+                                Enterprise-Grade AI<br/>Built on Physical Infrastructure
+                            </h1>
+                            <p style="color: var(--text-muted)" class="text-lg mb-8 max-w-2xl">
+                                CMMC 2.0 compliant sovereign AI for defense contractors.
+                                Self-hosted intelligence on dedicated hardware you control.
+                            </p>
+                            <div class="flex gap-4">
+                                <button
+                                    style="background-color: var(--accent-voltage); color: var(--bg-void)"
+                                    class="px-6 py-3 rounded-lg text-sm font-bold tracking-wide hover:shadow-lg transition-shadow"
+                                >
+                                    REQUEST ACCESS
+                                </button>
+                                <button
+                                    style="background-color: transparent; color: var(--text-plasma); border: 1px solid var(--border-bright)"
+                                    class="px-6 py-3 rounded-lg text-sm font-bold tracking-wide hover:border-gray-400 transition-colors"
+                                >
+                                    VIEW ARCHITECTURE
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Stats Grid -->
+                        <div class="grid grid-cols-3 gap-4 mt-12">
+                            <div style="background-color: var(--bg-orbital); border: 1px solid var(--border-dim)" class="rounded-lg p-4">
+                                <div style="color: var(--signal-beam)" class="text-xs font-mono mb-2">● MODELS</div>
+                                <div style="color: var(--text-plasma)" class="text-2xl font-bold mb-1">359+</div>
+                                <div style="color: var(--text-dark)" class="text-xs">Self-hosted instances</div>
+                            </div>
+                            <div style="background-color: var(--bg-orbital); border: 1px solid var(--border-dim)" class="rounded-lg p-4">
+                                <div style="color: var(--status-active)" class="text-xs font-mono mb-2">● UPTIME</div>
+                                <div style="color: var(--text-plasma)" class="text-2xl font-bold mb-1">99.97%</div>
+                                <div style="color: var(--text-dark)" class="text-xs">L40S GPU cluster</div>
+                            </div>
+                            <div style="background-color: var(--bg-orbital); border: 1px solid var(--border-dim)" class="rounded-lg p-4">
+                                <div style="color: var(--accent-voltage)" class="text-xs font-mono mb-2">● LATENCY</div>
+                                <div style="color: var(--text-plasma)" class="text-2xl font-bold mb-1">&lt;45ms</div>
+                                <div style="color: var(--text-dark)" class="text-xs">Avg. response time</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div style="background-color: var(--bg-orbital); border: 1px solid var(--border-dim)" class="rounded-lg p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div style="background-color: var(--accent-voltage-dim); color: var(--accent-voltage)" class="w-10 h-10 rounded flex items-center justify-center text-xl font-bold">
+                                ⚡
+                            </div>
+                            <h3 style="color: var(--text-plasma)" class="text-lg font-bold">Sovereign Deployment</h3>
+                        </div>
+                        <p style="color: var(--text-muted)" class="text-sm leading-relaxed">
+                            No API dependencies. Your models run on dedicated hardware in your geographic region.
+                            Full compliance with CMMC 2.0 and ITAR requirements.
+                        </p>
+                    </div>
+
+                    <div style="background-color: var(--bg-orbital); border: 1px solid var(--border-dim)" class="rounded-lg p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div style="background-color: rgba(124, 58, 237, 0.15); color: var(--signal-beam)" class="w-10 h-10 rounded flex items-center justify-center text-xl font-bold">
+                                🔒
+                            </div>
+                            <h3 style="color: var(--text-plasma)" class="text-lg font-bold">Hardware-Level Security</h3>
+                        </div>
+                        <p style="color: var(--text-muted)" class="text-sm leading-relaxed">
+                            Built by a licensed master electrician. Physical infrastructure designed with
+                            enterprise electrical standards from day one.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Analysis -->
+        <div class="bg-gray-900 rounded-2xl p-6 border border-gray-800 mb-8">
+            <h3 class="text-2xl font-bold text-white mb-6">⚡ Why "Cinematic Industrial" Wins</h3>
+
+            <div class="space-y-4">
+                <div class="bg-gray-800/50 rounded-lg p-4 border-l-4 border-orange-500">
+                    <h4 class="text-orange-500 font-semibold mb-2">🔥 The Electrician's Moat</h4>
+                    <ul class="text-gray-300 text-sm space-y-2">
+                        <li>• <strong>Orange = High Voltage Warning</strong> - International electrical safety color</li>
+                        <li>• <strong>Deep Void = Server Racks</strong> - Physical infrastructure reality</li>
+                        <li>• <strong>Matte Finishes = Industrial Grade</strong> - Not consumer software, not toys</li>
+                        <li>• <strong>Monospace Typography</strong> - Engineering precision, developer credibility</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-800/50 rounded-lg p-4 border-l-4 border-red-500">
+                    <h4 class="text-red-500 font-semibold mb-2">❌ Why Blue Failed</h4>
+                    <ul class="text-gray-300 text-sm space-y-2">
+                        <li>• <code class="font-mono">#1E90FF</code> = Generic SaaS (Salesforce, Microsoft, WordPress)</li>
+                        <li>• Signals "software wrapper" not "sovereign infrastructure"</li>
+                        <li>• Zero differentiation in a sea of blue AI tools</li>
+                        <li>• Doesn't leverage your physical hardware background</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-800/50 rounded-lg p-4 border-l-4 border-purple-500">
+                    <h4 class="text-purple-500 font-semibold mb-2">🎯 Target Market Alignment</h4>
+                    <ul class="text-gray-300 text-sm space-y-2">
+                        <li>• <strong>Defense Contractors:</strong> Need to see "industrial strength" not "startup vibes"</li>
+                        <li>• <strong>CMMC 2.0 Enterprises:</strong> Trust physical infrastructure operators over API resellers</li>
+                        <li>• <strong>Sovereign AI Buyers:</strong> Want vendor who understands hardware at electrical level</li>
+                        <li>• <strong>Visual Peers:</strong> Palantir, Anduril, Databricks - not Notion or Linear</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-800/50 rounded-lg p-4 border-l-4 border-green-500">
+                    <h4 class="text-green-500 font-semibold mb-2">✓ Implementation Rules</h4>
+                    <ul class="text-gray-300 text-sm space-y-2">
+                        <li>• <strong>NO gradients on text</strong> - Keeps it professional, not web3/crypto</li>
+                        <li>• <strong>Matte card backgrounds</strong> - Flat panels with 1px borders only</li>
+                        <li>• <strong>Voltage used sparingly</strong> - Reserve orange for critical moments/CTAs</li>
+                        <li>• <strong>JetBrains Mono for specs</strong> - Reinforces engineering company identity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Decision & Actions -->
+        <div class="bg-gradient-to-br from-orange-950/20 to-purple-950/20 rounded-2xl p-6 border-2 border-orange-500/30">
+            <h3 class="text-xl font-bold text-white mb-4">🚀 Final Decision: Industrial Palette</h3>
+            <p class="text-gray-300 mb-6">
+                This is your strategic differentiator. The orange voltage against deep void positions you as
+                an infrastructure operator who understands hardware at the electrical level.
+            </p>
+            <div class="flex gap-4 flex-wrap">
+                <button onclick="copyCSS()" class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-bold transition-colors">
+                    📋 Copy CSS Variables
+                </button>
+                <button onclick="copyBrandDoc()" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-bold transition-colors">
+                    📄 Copy Brand Guide
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Color data
+        const industrialColors = [
+            { name: "Deep Void", var: "--bg-void", hex: "#0B0A10", usage: "Main page background" },
+            { name: "Orbital Grey", var: "--bg-orbital", hex: "#15151E", usage: "Cards/Panels" },
+            { name: "Steel Plate", var: "--bg-steel", hex: "#232330", usage: "Inputs/Elevated surfaces" },
+            { name: "Border Dim", var: "--border-dim", hex: "#2A2A35", usage: "Subtle borders" },
+            { name: "Border Bright", var: "--border-bright", hex: "#3F3F50", usage: "Active borders" },
+            { name: "High Voltage", var: "--accent-voltage", hex: "#FF6B35", usage: "Primary CTA/Critical alerts" },
+            { name: "Voltage Dim", var: "--accent-voltage-dim", hex: "#FF6B3526", usage: "Subtle voltage (15% opacity)" },
+            { name: "Voltage Glow", var: "--accent-voltage-glow", hex: "#FF6B3566", usage: "Hovers/Active (40% opacity)" },
+            { name: "Aether Beam", var: "--signal-beam", hex: "#7C3AED", usage: "Secondary accent/Thinking states" },
+            { name: "Plasma White", var: "--text-plasma", hex: "#EBEBF5", usage: "Primary text/Headings" },
+            { name: "Muted Signal", var: "--text-muted", hex: "#9A9AB0", usage: "Secondary text/Specs" },
+            { name: "Text Dark", var: "--text-dark", hex: "#58586A", usage: "Placeholders/Disabled" },
+            { name: "Status Active", var: "--status-active", hex: "#10B981", usage: "Systems online" },
+            { name: "Status Critical", var: "--status-crit", hex: "#FF4444", usage: "System failure" },
+        ];
+
+        const landingPageColors = [
+            { name: "Aether Black", var: "--aether-black", hex: "#0A0A0F", usage: "Primary background" },
+            { name: "Aether Steel", var: "--aether-steel", hex: "#1A1A24", usage: "Secondary background" },
+            { name: "Aether Electric", var: "--aether-electric", hex: "#1E90FF", usage: "Primary accent/CTA" },
+            { name: "Aether White", var: "--aether-white", hex: "#F5F7FA", usage: "Primary text" },
+            { name: "Aether Amber", var: "--aether-amber", hex: "#FFC561", usage: "Warning/highlight" },
+            { name: "Aether Success", var: "--aether-success", hex: "#22C55E", usage: "Success states" },
+        ];
+
+        const brandColors = [
+            { name: "Deep Space Purple", var: "Primary", hex: "#1a0b2e", usage: "Logo primary" },
+            { name: "High Voltage Orange", var: "Accent", hex: "#ff6b35", usage: "Logo accent" },
+            { name: "Aether White", var: "Text", hex: "#e6f1ff", usage: "Logo text" },
+        ];
+
+        // Create color cards
+        function createColorCard(color, isLarge = false) {
+            const height = isLarge ? 'h-48' : 'h-32';
+            return `
+                <div onclick="copyColor('${color.hex}')" class="${height} color-card relative cursor-pointer rounded-xl p-4 flex flex-col justify-end border border-white/10" style="background-color: ${color.hex}">
+                    <div class="text-white font-semibold text-sm mb-1">${color.name}</div>
+                    <div class="text-white/70 text-xs font-mono mb-1">${color.hex}</div>
+                    ${color.var ? `<div class="text-white/50 text-xs font-mono mb-1">${color.var}</div>` : ''}
+                    <div class="text-white/60 text-xs italic">${color.usage}</div>
+                    <div class="absolute -top-2 -right-2 bg-white text-black text-xs px-2 py-1 rounded shadow-lg font-mono opacity-0 hover:opacity-100 transition-opacity">
+                        Click to copy
+                    </div>
+                </div>
+            `;
+        }
+
+        // Populate color grids
+        document.getElementById('industrialColors').innerHTML = industrialColors.map(c => createColorCard(c)).join('');
+        document.getElementById('landingColors').innerHTML = landingPageColors.slice(0, 6).map(c => createColorCard(c)).join('');
+        document.getElementById('brandColors').innerHTML = brandColors.map(c => createColorCard(c, true)).join('');
+
+        // Copy functions
+        function showToast(message) {
+            const toast = document.getElementById('copyToast');
+            toast.textContent = message;
+            toast.classList.remove('hidden');
+            setTimeout(() => toast.classList.add('hidden'), 2000);
+        }
+
+        function copyColor(hex) {
+            navigator.clipboard.writeText(hex);
+            showToast(`Copied ${hex} to clipboard!`);
+        }
+
+        function copyCSS() {
+            const css = `:root {
+  /* BACKGROUNDS - The Industrial Void */
+  --bg-void: #0B0A10;
+  --bg-orbital: #15151E;
+  --bg-steel: #232330;
+
+  /* BORDERS - Mechanical Precision */
+  --border-dim: #2A2A35;
+  --border-bright: #3F3F50;
+
+  /* ACCENTS - High Voltage */
+  --accent-voltage: #FF6B35;
+  --accent-voltage-dim: rgba(255, 107, 53, 0.15);
+  --accent-voltage-glow: rgba(255, 107, 53, 0.4);
+
+  /* INTELLIGENCE - The Aether */
+  --signal-beam: #7C3AED;
+
+  /* TEXT - Legibility First */
+  --text-plasma: #EBEBF5;
+  --text-muted: #9A9AB0;
+  --text-dark: #58586A;
+
+  /* STATUS */
+  --status-active: #10B981;
+  --status-crit: #FF4444;
+}`;
+            navigator.clipboard.writeText(css);
+            showToast('CSS Variables copied!');
+        }
+
+        function copyBrandDoc() {
+            const brandDoc = `# AetherPro Brand Guidelines - Cinematic Industrial
+
+## Strategic Position
+**"Sovereign AI Infrastructure Built by a Master Electrician"**
+
+AetherPro is not software - it's physical infrastructure for AI. We compete with Palantir, Anduril, and Databricks on industrial strength, not with Notion and Linear on consumer polish.
+
+---
+
+## Color Palette: "Cinematic Industrial"
+
+### The Void (Backgrounds)
+- **Deep Void**: #0B0A10 - Main page background
+- **Orbital Grey**: #15151E - Card/panel backgrounds
+- **Steel Plate**: #232330 - Input fields/elevated surfaces
+
+### The Power (Accents)
+- **High Voltage**: #FF6B35 - Primary CTA, critical alerts, logo accent
+  - International electrical warning color
+  - YOUR unfair advantage as an electrician
+  - Use SPARINGLY for maximum impact
+- **Voltage Dim**: rgba(255, 107, 53, 0.15) - Subtle highlights
+- **Voltage Glow**: rgba(255, 107, 53, 0.4) - Hover states
+
+### The Signal (Intelligence)
+- **Aether Beam**: #7C3AED - Secondary accent for "thinking" states, loading, active processes
+
+### Text (Legibility First)
+- **Plasma White**: #EBEBF5 - Primary text/headings
+- **Muted Signal**: #9A9AB0 - Secondary text/technical specs
+- **Text Dark**: #58586A - Placeholders/disabled states
+
+---
+
+## Typography
+
+### Headings
+- **Font**: Inter (Bold)
+- **Weight**: 700
+- **Color**: Plasma White (#EBEBF5)
+- **Style**: ALL CAPS for section labels, Title Case for H1/H2
+
+### Body Text
+- **Font**: Inter (Regular)
+- **Weight**: 400
+- **Color**: Muted Signal (#9A9AB0)
+- **Line Height**: 1.6 for readability
+
+### Technical/Code
+- **Font**: JetBrains Mono
+- **Usage**: Numbers, technical specs, status indicators, small labels
+- **Why**: Reinforces engineering company identity
+
+---
+
+## Visual Rules
+
+### ❌ NEVER
+- Gradients on text (looks cheap/web3)
+- Heavy drop shadows (not industrial)
+- Bright neon purple backgrounds (looks like gaming/crypto)
+- Multiple accent colors competing (dilutes voltage impact)
+
+### ✅ ALWAYS
+- Matte finishes on cards (flat panels, 1px borders max)
+- High contrast text (never sacrifice legibility)
+- Generous whitespace (premium feel)
+- Monospace for all technical data
+
+---
+
+**Last Updated**: November 2024
+**Contact**: Cory @ AetherPro Technologies LLC`;
+            navigator.clipboard.writeText(brandDoc);
+            showToast('Brand Guide copied!');
+        }
+    </script>
+</body>
+</html>
