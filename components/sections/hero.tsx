@@ -194,7 +194,7 @@ export function HeroSection() {
 
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-text-muted mb-8 leading-relaxed">
-              Designed for organizations that operate under strict security, privacy, and regulatory requirements.
+              Designed for organizations operating under strict security, privacy, and regulatory requirements.
               AetherPro delivers self-hosted intelligence on dedicated hardware you control — operating solely on U.S. soil.
             </p>
 
@@ -219,7 +219,7 @@ export function HeroSection() {
 
               <div className="border-l border-border-dim pl-6 space-y-5 mb-10">
                 <p className="text-base text-text-muted leading-relaxed">
-                  Purpose-built for regulated industries, critical infrastructure, and organizations that require full control over their compute environment.
+                  Purpose-built for regulated industries, critical infrastructure, and teams that require full control of their compute environment.
                 </p>
                 <p className="text-base text-text-muted leading-relaxed">
                   You own the hardware. You control physical access, power, cooling, and network boundaries.
@@ -242,7 +242,7 @@ export function HeroSection() {
                 </div>
                 <div>
                   <div className="text-text-dark font-mono text-xs">Deployment</div>
-                  <div className="text-text-plasma mt-2 font-mono">Air-gapped options</div>
+                  <div className="text-text-plasma mt-2 font-mono">Air-gapped and network-restricted options available</div>
                 </div>
               </div>
             </div>

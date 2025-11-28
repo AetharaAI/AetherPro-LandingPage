@@ -12,7 +12,10 @@ export function InfrastructureSection() {
     'On-premises or hosted deployment options',
     'Full electrical code compliance',
     'Designed for 24/7/365 operation',
-    'CMMC 2.0 compliance ready'
+    'CMMC 2.0 / NIST SP 800-171 aligned design',
+    'Can operate with zero external API dependencies in fully sovereign mode',
+    'All inference and data processing run entirely on dedicated hardware under your control, with no cloud or third-party calls',
+    'Control mappings and documentation available to support customer SSP and POA&M preparation'
   ]
 
   return (
