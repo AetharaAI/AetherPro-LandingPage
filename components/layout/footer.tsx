@@ -116,6 +116,10 @@ export function Footer() {
               <p className="text-text-muted text-xs font-mono">
                 Sovereign AI infrastructure built entirely on American soil.
               </p>
+              <p className="text-text-muted text-xs font-mono mt-2">
+                AetherPro does not publicly disclose customer identities or deployment details.
+                Our infrastructure is engineered for environments where discretion, sovereignty, and control are paramount.
+              </p>
             </div>
           </div>
         </div>

@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  apriel-router:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: apriel-router
+    restart: unless-stopped
+    ports:
+      - "8001:8001"
+    env_file: .env
+    environment:
+      - VLLM_BASE_URL=http://vllm:8000/v1
+      - SEARCH_API_URL=http://searxng:8080/search
+      - DEFAULT_MODEL=${DEFAULT_MODEL:-apriel-1.5-15b-thinker}
+      - AETHER_API_KEY=${AETHER_API_KEY}
+    depends_on:
+      - vllm
+    networks:
+      - aether-net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  vllm:
+    image: vllm/vllm-openai:latest
+    container_name: apriel-engine
+    runtime: nvidia
+    restart: unless-stopped
+    environment:
+      - HUGGING_FACE_HUB_TOKEN=${HF_TOKEN}
+    volumes:
+      - /home/ubuntu/Neuro-Symbiotic/models/apriel:/app/model
+      - ~/.cache/huggingface:/root/.cache/huggingface
+      - ./chat_template.jinja:/app/chat_template.jinja:ro
+    ports:
+      - "127.0.0.1:8000:8000"
+    ipc: host
+    command: ["--model", "/app/model", "--dtype", "half", "--gpu-memory-utilization", "0.90", "--max-model-len", "16384", "--enforce-eager", "--served-model-name", "apriel-1.5-15b-thinker", "--api-key", "token-aetherpro"]
+    networks:
+      - aether-net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 120s
+
+networks:
+  aether-net:
+    driver: bridge

@@ -1,0 +1,109 @@
+# SearXNG Configuration for AetherPro
+# =====================================
+# Optimized for API usage with Apriel Router
+
+use_default_settings: true
+
+general:
+  instance_name: "AetherPro Search"
+  debug: false
+  enable_metrics: true
+
+search:
+  safe_search: 0
+  autocomplete: "google"
+  default_lang: "en"
+  
+  # Formats enabled for API
+  formats:
+    - html
+    - json
+
+server:
+  # Bind to all interfaces for Docker networking
+  bind_address: "0.0.0.0"
+  port: 8080
+  secret_key: "${SEARXNG_SECRET}"
+  
+  # Rate limiting
+  limiter: false  # Disable for internal API use
+  
+  # Image proxy (disable for API-only)
+  image_proxy: false
+
+ui:
+  # Minimal UI for API-focused deployment
+  static_use_hash: true
+  default_theme: simple
+  
+  # Disable unnecessary features
+  infinite_scroll: false
+  query_in_title: false
+
+# Enabled search engines
+engines:
+  # Primary engines
+  - name: google
+    engine: google
+    shortcut: g
+    disabled: false
+    
+  - name: bing
+    engine: bing
+    shortcut: b
+    disabled: false
+    
+  - name: duckduckgo
+    engine: duckduckgo
+    shortcut: ddg
+    disabled: false
+
+  # Tech-focused engines
+  - name: github
+    engine: github
+    shortcut: gh
+    disabled: false
+    
+  - name: stackoverflow
+    engine: stackoverflow
+    shortcut: so
+    disabled: false
+    
+  - name: arxiv
+    engine: arxiv
+    shortcut: ar
+    disabled: false
+
+  # News engines
+  - name: google news
+    engine: google_news
+    shortcut: gn
+    disabled: false
+
+# Outgoing requests
+outgoing:
+  # Request timeout
+  request_timeout: 10.0
+  
+  # Max redirects
+  max_redirects: 3
+  
+  # Pool connections
+  pool_connections: 100
+  pool_maxsize: 20
+  
+  # Enable keepalive
+  enable_http2: true
+
+# Result processing
+result_proxy:
+  # URL rewriting disabled for raw results
+  url_rewrite: false
+
+# Categories
+categories_as_tabs:
+  general:
+  images:
+  news:
+  science:
+  it:
