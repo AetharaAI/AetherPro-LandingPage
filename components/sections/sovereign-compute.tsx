@@ -11,13 +11,14 @@ export function SovereignComputeSection() {
           <div className="lg:col-span-7">
             <SectionLabel>COMPUTE</SectionLabel>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-plasma mb-6 leading-tight">
-              Your AI. Your Hardware. Your Soil.
+              Your AI. Your Data. Your Sovereignty.
             </h2>
             <p className="text-lg md:text-xl text-text-muted mb-6 leading-relaxed">
-              AetherPro is building GPU-powered micro data centers across Indiana. Real compute infrastructure owned and operated on American soil. No external API calls. No cloud dependencies. No data leaving your control.
+              AetherPro delivers cloud-sovereign multi-node deployments that keep data ownership, policy enforcement, and model routing under your control.
+              Built for regulated teams that require independence without sacrificing scale.
             </p>
             <p className="text-lg md:text-xl text-text-muted leading-relaxed">
-              When you run on AetherPro infrastructure, you own every electron and every inference.
+              Every inference runs inside your sovereign boundary with no external dependency required.
             </p>
           </div>
 
@@ -25,19 +26,19 @@ export function SovereignComputeSection() {
           <div className="lg:col-span-5 grid grid-cols-2 gap-6">
             <StatCard
               value="0"
-              label="EXTERNAL API DEPENDENCIES"
+              label="EXTERNAL DATA TRANSFERS"
             />
             <StatCard
               value="100%"
-              label="U.S. SOIL INFERENCE"
+              label="SOVEREIGN DATA OWNERSHIP"
             />
             <StatCard
-              value="<50ms"
-              label="RESPONSE LATENCY"
+              value="L40S"
+              label="ACTIVE INFERENCE NODES"
             />
             <StatCard
-              value="∞"
-              label="UPTIME SLAs"
+              value="vLLM"
+              label="ENTERPRISE INFERENCE"
             />
           </div>
         </div>
