@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { writeContact } from '@/lib/contacts'
 
 export async function POST(request: NextRequest) {
   try {
@@ -13,17 +14,26 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // TODO: Integrate with Resend, SendGrid, or your email service provider
-    // Example integration with Resend:
-    // const resend = new Resend(process.env.RESEND_API_KEY)
-    // await resend.emails.send({
-    //   from: 'AetherPro <newsletter@aetherpro.us>',
-    //   to: email,
-    //   subject: 'Welcome to AetherPro',
-    //   html: '<p>Thank you for subscribing!</p>'
-    // })
+    await writeContact({
+      email,
+      source: 'newsletter',
+    })
 
-    console.log('Newsletter subscription:', email)
+    if (process.env.RESEND_API_KEY && process.env.RESEND_FROM) {
+      await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          from: process.env.RESEND_FROM,
+          to: email,
+          subject: 'Welcome to AetherPro',
+          html: '<p>Welcome to AetherPro Technologies. You are now subscribed to sovereign AI updates.</p>',
+        }),
+      })
+    }
 
     return NextResponse.json(
       { success: true, message: 'Successfully subscribed to newsletter' },

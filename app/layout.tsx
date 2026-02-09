@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     default: 'AetherPro | Sovereign AI Infrastructure for America',
     template: '%s | AetherPro'
   },
-  description: 'AetherPro builds sovereign AI infrastructure on U.S. soil — from GPU racks to autonomous agents. No external dependencies. Built by a Master Electrician.',
+  description: 'AetherPro Technologies is the architect of AetherOS — a sovereign, composable AI operating system for total data ownership and infrastructure independence.',
   keywords: [
     'sovereign AI',
     'AI infrastructure',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     url: 'https://aetherpro.us',
     siteName: 'AetherPro',
     title: 'AetherPro | Sovereign AI Infrastructure for America',
-    description: 'From GPUs to intelligence — sovereign AI infrastructure built entirely on U.S. soil.',
+    description: 'Sovereign AI infrastructure and AetherOS deployments engineered for total data ownership and infrastructure independence.',
     images: [
       {
         url: '/og-image.png',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'AetherPro | Sovereign AI Infrastructure for America',
-    description: 'From GPUs to intelligence — sovereign AI infrastructure built entirely on U.S. soil.',
+    description: 'Sovereign AI infrastructure and AetherOS deployments engineered for total data ownership and infrastructure independence.',
     images: ['/og-image.png']
   },
   robots: {

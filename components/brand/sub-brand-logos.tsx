@@ -10,9 +10,9 @@ export function SubBrandLogos({ className }: SubBrandLogosProps) {
     <div className={cn('flex items-center gap-4', className)}>
       <div className="opacity-60 hover:opacity-100 transition-opacity">
         <Image
-          src="/logos/AetherAI-logo-256.png"
-          alt="AetherAI"
-          width={100}
+          src="/logos/aetheros.svg"
+          alt="AetherOS"
+          width={120}
           height={24}
           className="h-6 w-auto object-contain"
           unoptimized={true}
