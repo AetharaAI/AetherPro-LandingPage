@@ -10,18 +10,18 @@ export function SovereignVoiceSection() {
         <div>
           <SectionLabel variant="voltage">SOVEREIGN VOICE</SectionLabel>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-plasma mb-6 leading-tight">
-            Mission-Critical Sovereign Voice AI
+            Voice Agents Built Around Business Outcomes
           </h2>
           <p className="text-lg md:text-xl text-text-muted mb-6 leading-relaxed">
-            AetherPro integrates Speechmatics Enterprise Voice AI to deliver high-accuracy, low-latency
-            speech-to-text within fully sovereign environments.
+            Syndicate Voice gives businesses private intake, routing, qualification, and follow-up workflows
+            without forcing every call path through a generic chatbot or public admin surface.
           </p>
           <p className="text-lg md:text-xl text-text-muted mb-8 leading-relaxed">
-            On-premises, containerized deployment keeps all audio data behind your firewall — voice intelligence
-            without cloud exposure.
+            Voice, ASR, TTS, model routing, and workflow execution can be deployed through managed private
+            cloud, customer-controlled cloud, dedicated infrastructure, and future on-prem paths.
           </p>
           <Button variant="voltage" size="lg" asChild>
-            <Link href="/docs">VIEW VOICE ARCHITECTURE</Link>
+            <Link href="/docs#voice-agents">VIEW VOICE ARCHITECTURE</Link>
           </Button>
         </div>
         <div className="bg-bg-void border border-border-dim rounded-lg p-8">
@@ -29,10 +29,10 @@ export function SovereignVoiceSection() {
             Technical Edge
           </div>
           <ul className="space-y-4 text-text-muted text-sm">
-            <li>• Speechmatics on-premise engine for air-gapped deployments</li>
-            <li>• Real-time transcription inside sovereign node boundaries</li>
-            <li>• Multi-tenant routing with AetherOS policy controls</li>
-            <li>• Audio data never leaves your infrastructure</li>
+            <li>• Inbound and after-hours call coverage</li>
+            <li>• Lead capture, qualification, and routing</li>
+            <li>• Scoped agent authority through Passport / APIS</li>
+            <li>• Customer-controlled data, routing, and policy enforcement</li>
           </ul>
         </div>
       </div>

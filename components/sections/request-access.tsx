@@ -54,11 +54,11 @@ export function RequestAccessSection() {
       <div className="max-w-5xl mx-auto" id="request-access">
         <SectionLabel variant="voltage">REQUEST ACCESS</SectionLabel>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-plasma mb-6 leading-tight">
-          Secure a Sovereign AetherOS Deployment
+          Request Private AI Access
         </h2>
         <p className="text-lg md:text-xl text-text-muted mb-10 leading-relaxed max-w-3xl">
-          Tell us how you plan to use AetherOS and the sovereign stack. We will follow up with a deployment
-          brief, architecture guidance, and onboarding next steps.
+          Tell us where voice agents, secure automation, or controlled inference can create leverage.
+          We will follow up with architecture guidance and the right deployment path.
         </p>
 
         <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-6">
@@ -85,7 +85,7 @@ export function RequestAccessSection() {
           />
           <Input
             type="text"
-            placeholder="Primary Use Case (e.g., Sovereign Inference)"
+            placeholder="Primary Use Case (e.g., after-hours voice intake)"
             value={formData.primaryUseCase}
             onChange={handleChange('primaryUseCase')}
             required

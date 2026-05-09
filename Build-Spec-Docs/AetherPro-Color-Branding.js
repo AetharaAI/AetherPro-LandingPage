@@ -169,8 +169,8 @@ const ColorPaletteComparison = () => {
                   Enterprise-Grade AI<br/>Built on Physical Infrastructure
                 </h1>
                 <p style={{ color: '#9A9AB0' }} className="text-lg mb-8 max-w-2xl">
-                  CMMC 2.0 compliant sovereign AI for defense contractors. 
-                  Self-hosted intelligence on dedicated hardware you control.
+                  CMMC/NIST-aligned sovereign AI for security-sensitive organizations.
+                  Private intelligence with controlled data, routing, and deployment boundaries.
                 </p>
                 <div className="flex gap-4">
                   <button 

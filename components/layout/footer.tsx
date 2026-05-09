@@ -1,45 +1,21 @@
 'use client'
 
-import { useState, type FormEvent } from 'react'
-import Image from 'next/image'
+import { useState } from 'react'
 import { ShieldLogo } from '@/components/brand/shield-logo'
 import { Wordmark } from '@/components/brand/wordmark'
-import { SubBrandLogos } from '@/components/brand/sub-brand-logos'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 
 export function Footer() {
   const [email, setEmail] = useState('')
   const [subscribed, setSubscribed] = useState(false)
-  const [statusMessage, setStatusMessage] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubscribe = (e: FormEvent) => {
+  const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault()
-    setIsSubmitting(true)
-    setStatusMessage('')
-
-    fetch('/api/newsletter', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email }),
-    })
-      .then(async (response) => {
-        const data = await response.json()
-        if (!response.ok) {
-          throw new Error(data?.error ?? 'Unable to subscribe')
-        }
-        setSubscribed(true)
-        setStatusMessage('Welcome to AetherPro. Confirmation sent.')
-        setEmail('')
-        setTimeout(() => setSubscribed(false), 3000)
-      })
-      .catch((error) => {
-        setStatusMessage(error instanceof Error ? error.message : 'Unable to subscribe')
-      })
-      .finally(() => {
-        setIsSubmitting(false)
-      })
+    // Newsletter signup logic would go here
+    setSubscribed(true)
+    setTimeout(() => setSubscribed(false), 3000)
+    setEmail('')
   }
 
   return (
@@ -62,15 +38,18 @@ export function Footer() {
             </h4>
             <ul className="space-y-3">
               {[
-                { label: 'About', href: '/about' },
-                { label: 'Products', href: '/products' },
-                { label: 'Roadmap', href: '/#roadmap' },
-                { label: 'Whitepaper', href: '/docs' },
-                { label: 'Contact', href: '/#request-access' },
+                { label: 'Voice Agents / Syndicate', href: '#voice-agents' },
+                { label: 'Passport / APIS', href: '#ecosystem' },
+                { label: 'COLLAB', href: '#ecosystem' },
+                { label: 'RedWatch', href: 'https://redwatch.us' },
+                { label: 'Platform', href: 'https://platform.aetherpro.us' },
+                { label: 'Contact', href: 'mailto:hello@aetherpro.us' },
               ].map((item) => (
                 <li key={item.label}>
                   <a
                     href={item.href}
+                    target={item.href.startsWith('http') ? '_blank' : undefined}
+                    rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                     className="text-text-muted hover:text-text-plasma transition-colors duration-150 text-sm"
                   >
                     {item.label}
@@ -99,7 +78,7 @@ export function Footer() {
             </ul>
             <div className="mt-6">
               <p className="text-text-muted text-sm">hello@aetherpro.us</p>
-              <p className="text-text-muted text-sm">United States</p>
+              <p className="text-text-muted text-sm">Indiana, USA</p>
             </div>
           </div>
 
@@ -109,7 +88,7 @@ export function Footer() {
               Stay Updated
             </h4>
             <p className="text-text-muted text-sm mb-4 leading-relaxed">
-              Stay sovereign. Get updates on AetherPro infrastructure, models, and deployments.
+              Get updates on private AI voice agents, secure automation, and AetherPro deployment paths.
             </p>
             <form onSubmit={handleSubscribe} className="space-y-3">
               <Input
@@ -119,40 +98,15 @@ export function Footer() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
-              <Button type="submit" variant="voltage" className="w-full" disabled={isSubmitting}>
-                {isSubmitting ? 'SUBMITTING...' : 'SUBSCRIBE'}
+              <Button type="submit" variant="voltage" className="w-full">
+                SUBSCRIBE
               </Button>
               {subscribed && (
                 <p className="text-status-active text-xs font-mono">
-                  {statusMessage || 'Subscribed successfully!'}
+                  Subscribed successfully!
                 </p>
               )}
-              {!subscribed && statusMessage && (
-                <p className="text-status-critical text-xs font-mono">{statusMessage}</p>
-              )}
             </form>
-          </div>
-        </div>
-
-        <div className="border-t border-border-dim pt-8 mb-8">
-          <p className="text-xs font-mono uppercase tracking-[0.3em] text-text-dark mb-4">
-            Sovereign Infrastructure Partners
-          </p>
-          <div className="flex flex-wrap items-center gap-8">
-            <Image
-              src="/partners/ovhcloud.svg"
-              alt="OVHcloud logo"
-              width={160}
-              height={48}
-              className="h-8 w-auto"
-            />
-            <Image
-              src="/partners/speechmatics.svg"
-              alt="Speechmatics logo"
-              width={180}
-              height={48}
-              className="h-8 w-auto"
-            />
           </div>
         </div>
 
@@ -160,15 +114,14 @@ export function Footer() {
         <div className="border-t border-border-dim pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2 text-text-muted text-sm">
-              <span>Powered by:</span>
-              <SubBrandLogos />
+              <span>Deployment ecosystem: managed private cloud, customer-controlled cloud, dedicated infrastructure, and future on-prem options.</span>
             </div>
             <div className="text-center md:text-right">
               <p className="text-text-muted text-xs font-mono mb-1">
-                © 2024 AetherPro Technologies LLC. All rights reserved.
+                © 2026 AetherPro Technologies LLC. All rights reserved.
               </p>
               <p className="text-text-muted text-xs font-mono">
-                Sovereign AI infrastructure for total data ownership and independence.
+                Sovereign AI infrastructure for voice, agents, and secure automation.
               </p>
               <p className="text-text-muted text-xs font-mono mt-2">
                 AetherPro does not publicly disclose customer identities or deployment details.

@@ -1,0 +1,13 @@
+<svg width="420" height="88" viewBox="0 0 420 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="8" width="72" height="72" rx="16" fill="#0D1117"/>
+  <path d="M36 18L56 26V42C56 56 47.5 68.5 36 74C24.5 68.5 16 56 16 42V26L36 18Z" fill="url(#paGrad)"/>
+  <path d="M36 31L45 35V42C45 48.5 41 54 36 56.5C31 54 27 48.5 27 42V35L36 31Z" fill="#0D1117"/>
+  <circle cx="36" cy="41" r="2.5" fill="url(#paGrad)"/>
+  <text x="90" y="45" fill="#F8FAFC" font-family="Inter, system-ui, sans-serif" font-size="32" font-weight="700">Passport Alliance</text>
+  <defs>
+    <linearGradient id="paGrad" x1="16" y1="18" x2="56" y2="74" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4361EE"/>
+      <stop offset="1" stop-color="#2EC4B6"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -17,21 +17,24 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://aetherpro.us'),
   title: {
-    default: 'AetherPro | Sovereign AI Infrastructure for America',
+    default: 'AetherPro | Sovereign AI Infrastructure for Voice and Agents',
     template: '%s | AetherPro'
   },
-  description: 'AetherPro Technologies is the architect of AetherOS — a sovereign, composable AI operating system for total data ownership and infrastructure independence.',
+  description: 'AetherPro builds private AI voice agents, agent identity, secure orchestration, and controlled inference for organizations that need privacy, auditability, and operational reliability.',
   keywords: [
     'sovereign AI',
     'AI infrastructure',
+    'voice AI agents',
+    'private AI automation',
+    'agent identity',
+    'APIS',
+    'Passport Alliance',
+    'MCP orchestration',
     'self-hosted AI',
-    'GPU hosting',
-    'American AI',
     'AI agents',
-    'local AI',
-    'CMMC 2.0',
+    'controlled inference',
     'data sovereignty',
-    'on-premises AI'
+    'secure automation'
   ],
   authors: [{ name: 'AetherPro Technologies LLC' }],
   creator: 'AetherPro Technologies LLC',
@@ -41,8 +44,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://aetherpro.us',
     siteName: 'AetherPro',
-    title: 'AetherPro | Sovereign AI Infrastructure for America',
-    description: 'Sovereign AI infrastructure and AetherOS deployments engineered for total data ownership and infrastructure independence.',
+    title: 'AetherPro | Sovereign AI Infrastructure for Voice and Agents',
+    description: 'Private AI voice agents, agent identity, secure orchestration, and controlled inference.',
     images: [
       {
         url: '/og-image.png',
@@ -54,8 +57,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AetherPro | Sovereign AI Infrastructure for America',
-    description: 'Sovereign AI infrastructure and AetherOS deployments engineered for total data ownership and infrastructure independence.',
+    title: 'AetherPro | Sovereign AI Infrastructure for Voice and Agents',
+    description: 'Private AI voice agents, agent identity, secure orchestration, and controlled inference.',
     images: ['/og-image.png']
   },
   robots: {

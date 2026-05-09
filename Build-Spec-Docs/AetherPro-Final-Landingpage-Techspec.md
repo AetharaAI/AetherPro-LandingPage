@@ -309,8 +309,8 @@ Sovereign AI Infrastructure (tagline)
 AETHERPRO
 Sovereign AI Infrastructure
 
-Powered by:
-[Sub-brand logos - 24px height each]
+Ecosystem:
+[Product surfaces]
 ```
 
 ### Logo Component Implementation
@@ -350,11 +350,11 @@ When displaying "AETHERPRO":
 
 ## 3.3 Sub-brand Logos
 
-For footer "Powered by" section:
-- AetherInterface logo (24px height)
-- BlackBox Audio logo (24px height)
-- Display in muted state (`opacity: 0.6`)
-- Hover: full opacity
+For footer ecosystem section:
+- Syndicate Voice
+- Passport / APIS
+- COLLAB
+- RedWatch
 
 ---
 
@@ -775,7 +775,7 @@ interface StackComponentProps {
 - Success/error states
 
 **Bottom Row:**
-- "Powered by:" + sub-brand logos
+- Deployment ecosystem language
 - Copyright text
 
 ---

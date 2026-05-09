@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
 export interface SubBrandLogosProps {
@@ -6,29 +5,15 @@ export interface SubBrandLogosProps {
 }
 
 export function SubBrandLogos({ className }: SubBrandLogosProps) {
+  const brands = ['Syndicate Voice', 'Passport / APIS', 'COLLAB', 'RedWatch']
+
   return (
     <div className={cn('flex items-center gap-4', className)}>
-      <div className="opacity-60 hover:opacity-100 transition-opacity">
-        <Image
-          src="/logos/aetheros.svg"
-          alt="AetherOS"
-          width={120}
-          height={24}
-          className="h-6 w-auto object-contain"
-          unoptimized={true}
-        />
-      </div>
-      <span className="opacity-30 text-text-muted">•</span>
-      <div className="opacity-60 hover:opacity-100 transition-opacity">
-        <Image
-          src="/logos/blackbox-logo.png"
-          alt="BlackBox Audio"
-          width={100}
-          height={24}
-          className="h-6 w-auto object-contain"
-          unoptimized={true}
-        />
-      </div>
+      {brands.map((brand) => (
+        <span key={brand} className="font-mono text-xs uppercase tracking-wider text-text-muted">
+          {brand}
+        </span>
+      ))}
     </div>
   )
 }

@@ -2,19 +2,24 @@ import Link from 'next/link'
 
 const sections = [
   {
-    id: 'aetheros',
-    title: 'AetherOS',
-    description: 'Sovereign AI operating system for orchestrated agents, routing, and policy control.',
+    id: 'voice-agents',
+    title: 'Voice Agents / Syndicate',
+    description: 'Private AI voice agents for intake, routing, qualification, after-hours coverage, and revenue capture.',
   },
   {
     id: 'passport',
-    title: 'PassPort IAM',
-    description: 'Identity and mandate layer extending Keycloak with AI agency primitives and delegation.',
+    title: 'Passport / APIS',
+    description: 'Agent identity, scoped authorization, delegated authority, revocation, and verifiable accountability.',
   },
   {
-    id: 'mcp-fabric',
-    title: 'MCP Fabric',
-    description: 'Agent-to-Agent communication protocol powered by asynchronous Redis Streams.',
+    id: 'collab',
+    title: 'COLLAB',
+    description: 'MCP-compatible coordination, task handoff, message streams, and secure agent-to-agent communication.',
+  },
+  {
+    id: 'gateway',
+    title: 'Aether Gateway',
+    description: 'Controlled model routing, API gateways, voice services, ASR, TTS, and private inference access.',
   },
 ]
 
@@ -51,10 +56,10 @@ export default function DocsPage() {
             <p className="text-xs font-mono uppercase tracking-[0.3em] text-text-dark mb-4">
               Central Repository
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Sovereign Stack Documentation</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Sovereign AI Infrastructure Notes</h2>
             <p className="text-text-muted text-lg max-w-2xl">
               Technical specs, deployment guides, and architecture notes for the AetherPro ecosystem.
-              Use this hub to navigate platform documentation and core infrastructure capabilities.
+              Use this hub to navigate public-facing platform documentation and core infrastructure capabilities.
             </p>
           </header>
 
@@ -65,7 +70,7 @@ export default function DocsPage() {
                 <p className="text-text-muted mb-4">{section.description}</p>
                 <ul className="text-sm text-text-muted space-y-2">
                   <li>• Architecture overview and deployment topology</li>
-                  <li>• Compliance posture and sovereignty controls</li>
+                  <li>• Identity, routing, and deployment boundaries</li>
                   <li>• Integration points, APIs, and reference workflows</li>
                 </ul>
               </article>

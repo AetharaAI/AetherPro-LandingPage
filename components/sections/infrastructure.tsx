@@ -5,16 +5,16 @@ import { Check } from 'lucide-react'
 
 export function InfrastructureSection() {
   const specifications = [
-    'Cloud-sovereign multi-node deployment architecture',
-    'Active vLLM inference on L40S-90 and L40S-180 nodes',
-    'LiteLLM routing for sovereign model governance',
-    'Participation in the OVHcloud AI Accelerator Program',
-    'Secure tenant isolation and data ownership controls',
-    '24/7/365 operational monitoring and telemetry',
+    'Voice, ASR, TTS, and inference service routing',
+    'Scoped API keys and product access through AetherPro Platform',
+    'Passport / APIS identity for delegated agent authority',
+    'COLLAB task handoff, streams, and MCP-compatible coordination',
+    'RedWatch evidence collection and readiness workflows',
+    'Managed private cloud and customer-controlled cloud options',
+    'Dedicated/private infrastructure paths for qualified deployments',
     'CMMC 2.0 / NIST SP 800-171 aligned design',
-    'Zero external data transfers in fully sovereign mode',
-    'Deployment playbooks and SSP-ready documentation',
-    'Composable infrastructure for regulated environments'
+    'Auditability, access control, and evidence support without claiming certification',
+    'Customer-controlled data, model routing, and policy enforcement'
   ]
 
   return (
@@ -23,20 +23,19 @@ export function InfrastructureSection() {
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           {/* Left Column - Text */}
           <div className="lg:col-span-7">
-            <SectionLabel variant="voltage">INFRASTRUCTURE</SectionLabel>
+            <SectionLabel variant="voltage">AETHER GATEWAY</SectionLabel>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-plasma mb-6 leading-tight">
-              Cloud-Sovereign Multi-Node Deployments.
+              Controlled Model Routing Without Losing Operational Control.
             </h2>
             <p className="text-lg md:text-xl text-text-muted mb-6 leading-relaxed">
-              AetherPro delivers sovereign infrastructure that keeps control of data, routing, and model execution in your hands.
-              AetherOS deployments combine hardened AI orchestration with enterprise-grade inference.
+              The inference layer routes model, voice, ASR, TTS, and automation calls through controlled gateways with identity, policy, and usage enforcement.
             </p>
             <p className="text-lg md:text-xl text-text-muted mb-12 leading-relaxed">
-              Backed by the OVHcloud AI Accelerator Program and proven vLLM deployments, we help teams scale without surrendering sovereignty.
+              Private and dedicated infrastructure options are available for organizations that need stronger boundaries, but the public offer stays focused on outcomes: private voice agents and secure business automation.
             </p>
 
-            <Button variant="voltage" size="lg">
-              REQUEST DEPLOYMENT BRIEF
+            <Button variant="voltage" size="lg" asChild>
+              <a href="mailto:hello@aetherpro.us">REQUEST ACCESS</a>
             </Button>
           </div>
 

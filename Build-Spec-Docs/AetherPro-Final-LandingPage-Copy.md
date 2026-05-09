@@ -272,10 +272,11 @@ Sovereign AI Infrastructure
 
 [Email Input] [SUBSCRIBE]
 
-### Sub-brands
-Powered by:
-- AetherInterface
-- BlackBox Audio
+### Ecosystem
+- Syndicate Voice
+- Passport / APIS
+- COLLAB
+- RedWatch
 
 ---
 

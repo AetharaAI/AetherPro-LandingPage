@@ -4,41 +4,40 @@ import { StatCard } from '@/components/shared/stat-card'
 
 export function SovereignComputeSection() {
   return (
-    <SectionWrapper background="orbital">
+    <SectionWrapper background="orbital" id="architecture">
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           {/* Left Column - Text */}
           <div className="lg:col-span-7">
-            <SectionLabel>COMPUTE</SectionLabel>
+            <SectionLabel>DEPLOYMENT MODELS</SectionLabel>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-plasma mb-6 leading-tight">
-              Your AI. Your Data. Your Sovereignty.
+              Choose the Control Boundary That Fits the Work.
             </h2>
             <p className="text-lg md:text-xl text-text-muted mb-6 leading-relaxed">
-              AetherPro delivers cloud-sovereign multi-node deployments that keep data ownership, policy enforcement, and model routing under your control.
-              Built for regulated teams that require independence without sacrificing scale.
+              AetherPro is designed for managed private cloud, customer-controlled cloud, dedicated private infrastructure, and future on-prem deployment paths.
             </p>
             <p className="text-lg md:text-xl text-text-muted leading-relaxed">
-              Every inference runs inside your sovereign boundary with no external dependency required.
+              The public offer is simple: private AI voice agents and secure automation that preserve data ownership, routing control, and policy enforcement.
             </p>
           </div>
 
           {/* Right Column - Stats Grid */}
           <div className="lg:col-span-5 grid grid-cols-2 gap-6">
             <StatCard
-              value="0"
-              label="EXTERNAL DATA TRANSFERS"
+              value="01"
+              label="MANAGED PRIVATE CLOUD"
             />
             <StatCard
-              value="100%"
-              label="SOVEREIGN DATA OWNERSHIP"
+              value="02"
+              label="CUSTOMER-CONTROLLED CLOUD"
             />
             <StatCard
-              value="L40S"
-              label="ACTIVE INFERENCE NODES"
+              value="03"
+              label="DEDICATED INFRASTRUCTURE"
             />
             <StatCard
-              value="vLLM"
-              label="ENTERPRISE INFERENCE"
+              value="04"
+              label="FUTURE ON-PREM OPTIONS"
             />
           </div>
         </div>

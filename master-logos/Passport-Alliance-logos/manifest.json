@@ -1,0 +1,16 @@
+{
+  "name": "Passport Alliance",
+  "short_name": "Passport Alliance",
+  "description": "APIS v2.0 standards for verifiable AI agent identity",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#4361ee",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

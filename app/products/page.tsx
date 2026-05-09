@@ -1,28 +1,33 @@
 const products = [
   {
-    name: 'AetherOS',
-    description: 'Sovereign AI operating system for orchestrated agents, routing, and policy control.',
-    link: 'https://aetherpro.tech',
+    name: 'Syndicate AI Voice',
+    description: 'Private voice agents for intake, routing, qualification, appointment workflows, and after-hours coverage.',
+    link: 'https://syndicateai.co',
   },
   {
-    name: 'AgentForge Marketplace',
-    description: 'Marketplace for composable AI agents and standardized skill registries.',
-    link: 'https://aetheragentforge.org',
+    name: 'Passport / APIS',
+    description: 'Agent identity, scoped authorization, delegated authority, revocation, and verifiable accountability.',
+    link: 'https://passportalliance.org',
   },
   {
-    name: 'MCP Fabric',
-    description: 'Open-source A2A communication protocol using asynchronous Redis Streams.',
-    link: 'https://mcpfabric.space',
+    name: 'COLLAB',
+    description: 'MCP-compatible coordination, task handoff, streams, and agent-to-agent communication with identity enforcement.',
+    link: '/docs#collab',
   },
   {
-    name: 'Perceptor',
-    description: 'Multimodal sensing platform for sovereign perception and grounding.',
-    link: 'https://perceptor.us',
+    name: 'RedWatch',
+    description: 'Security readiness, evidence packages, controlled validation, and compliance-readiness workflows.',
+    link: 'https://redwatch.us',
   },
   {
-    name: 'BlackBox Audio',
-    description: 'Dedicated audio AI platform running specialized reasoning models for voice-first interactions.',
-    link: 'https://blackboxaudio.tech',
+    name: 'AetherPro Platform',
+    description: 'Authenticated control plane for product access, scoped API keys, usage, billing, and launch surfaces.',
+    link: 'https://platform.aetherpro.us',
+  },
+  {
+    name: 'Echo Fleet',
+    description: 'Agent fleet and orchestration concept for coordinating specialized agents across secure workflows.',
+    link: '/docs#gateway',
   },
 ]
 
@@ -37,8 +42,8 @@ export default function ProductsPage() {
             <a
               key={product.name}
               href={product.link}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={product.link.startsWith('http') ? '_blank' : undefined}
+              rel={product.link.startsWith('http') ? 'noopener noreferrer' : undefined}
               className="bg-bg-orbital border border-border-dim rounded-lg p-6 hover:border-border-bright transition-colors"
             >
               <h2 className="text-2xl font-semibold mb-3">{product.name}</h2>

@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 
 export function FinalCTASection() {
@@ -6,17 +5,17 @@ export function FinalCTASection() {
     <div className="bg-gradient-to-b from-bg-orbital to-bg-void py-40 px-6">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-plasma mb-6 leading-tight">
-          The Future Runs Sovereign.
+          Put Private Voice Agents and Secure Automation to Work.
         </h2>
         <p className="text-lg md:text-xl text-text-muted mb-12 leading-relaxed">
-          AetherPro Technologies builds AetherOS for teams that demand total data ownership and infrastructure independence.
+          Start with a business workflow that leaks revenue or time. AetherPro can map the voice agent, identity boundary, automation path, and deployment model around it.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button variant="voltage" size="lg" asChild>
-            <Link href="/docs">READ THE WHITEPAPER</Link>
+            <a href="mailto:hello@aetherpro.us">REQUEST ACCESS</a>
           </Button>
           <Button variant="default" size="lg" asChild>
-            <Link href="#request-access">CONTACT US</Link>
+            <a href="#architecture">VIEW ARCHITECTURE</a>
           </Button>
         </div>
       </div>

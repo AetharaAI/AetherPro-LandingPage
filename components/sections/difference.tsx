@@ -1,35 +1,40 @@
 import { SectionWrapper } from '@/components/layout/section-wrapper'
 import { SectionLabel } from '@/components/ui/section-label'
 import { FeatureCard } from '@/components/shared/feature-card'
-import { Server, Brain, Bot } from 'lucide-react'
+import { Bot, Fingerprint, Network, Server } from 'lucide-react'
 
 export function DifferenceSection() {
   return (
-    <SectionWrapper>
+    <SectionWrapper id="voice-agents">
       <div className="max-w-6xl mx-auto">
-        <SectionLabel variant="voltage">INFRASTRUCTURE</SectionLabel>
+        <SectionLabel variant="voltage">WHAT WE BUILD</SectionLabel>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-plasma mb-6 leading-tight">
-          Most Companies Rent Cloud AI. We Architect It.
+          Private AI Systems for Real Business Operations
         </h2>
         <p className="text-lg md:text-xl text-text-muted mb-16 max-w-3xl leading-relaxed">
-          AetherPro Technologies engineers sovereign infrastructure that keeps data, routing, and policy enforcement under your control while scaling across multi-node deployments.
+          AetherPro connects voice automation, agent identity, secure coordination, and controlled inference into one operational infrastructure layer.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <FeatureCard
-            icon={Server}
-            title="Cloud-Sovereign Infrastructure"
-            description="Multi-node deployments with data ownership, residency controls, and infrastructure independence. Built to scale without surrendering sovereignty."
-          />
-          <FeatureCard
-            icon={Brain}
-            title="AetherOS Intelligence Layer"
-            description="Composable AI services for vision, speech, voice, and reasoning unified under AetherOS. Sovereign model routing with operational guardrails."
-          />
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <FeatureCard
             icon={Bot}
-            title="Agent Operating System"
-            description="Aether Agent Forge delivers composable agents, skill registries, and deployment workflows that turn models into operational systems."
+            title="Voice AI Agents"
+            description="Inbound call coverage, after-hours intake, lead capture, qualification, appointment routing, and customer response workflows."
+          />
+          <FeatureCard
+            icon={Fingerprint}
+            title="Agent Identity / Passport"
+            description="Verifiable agent identity, scoped authorization, delegated authority, and revocation using APIS."
+          />
+          <FeatureCard
+            icon={Network}
+            title="Secure Coordination / COLLAB"
+            description="MCP-compatible coordination, task handoff, streams, and agent-to-agent communication with identity enforcement."
+          />
+          <FeatureCard
+            icon={Server}
+            title="Private AI Infrastructure"
+            description="Self-hosted inference, controlled model routing, API gateways, deployment playbooks, and private operational environments."
           />
         </div>
       </div>

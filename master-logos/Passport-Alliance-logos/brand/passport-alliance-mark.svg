@@ -1,0 +1,12 @@
+<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="8" width="56" height="56" rx="12" fill="#0D1117"/>
+  <path d="M28 14L48 24V38C48 50 39.5 60.5 28 66C16.5 60.5 8 50 8 38V24L28 14Z" fill="url(#paGradMark)"/>
+  <path d="M28 27L38 32V38C38 44 34 49 28 51.5C22 49 18 44 18 38V32L28 27Z" fill="#0D1117"/>
+  <circle cx="28" cy="37" r="2" fill="url(#paGradMark)"/>
+  <defs>
+    <linearGradient id="paGradMark" x1="8" y1="14" x2="48" y2="66" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4361EE"/>
+      <stop offset="1" stop-color="#2EC4B6"/>
+    </linearGradient>
+  </defs>
+</svg>

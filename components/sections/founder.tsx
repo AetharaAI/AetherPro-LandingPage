@@ -3,37 +3,38 @@ import { SectionLabel } from '@/components/ui/section-label'
 
 export function FounderSection() {
   const milestones = [
-    { date: 'May 2025', milestone: 'AetherPro Technologies established' },
-    { date: 'Phase 1', milestone: 'AetherOS architecture and agent chat foundation' },
-    { date: 'Phase 2', milestone: 'PassPort IAM and MCP Fabric live' },
-    { date: 'Phase 3', milestone: 'Perceptor + BlackBox Audio integrated' },
-    { date: 'Today', milestone: 'Scaling cloud-sovereign deployments' }
+    { date: 'Company', milestone: 'AetherPro Technologies LLC is the operating company behind the public infrastructure and product surfaces.' },
+    { date: 'Voice', milestone: 'Syndicate Voice turns missed calls, intake, qualification, and routing into automated business workflows.' },
+    { date: 'Identity', milestone: 'Passport / APIS gives agents scoped authority that can be verified, reviewed, and revoked.' },
+    { date: 'Platform', milestone: 'AetherPro Platform centralizes access, product launch surfaces, scoped API keys, usage, and billing.' },
+    { date: 'Security', milestone: 'RedWatch packages readiness workflows and evidence support for security-sensitive environments.' },
+    { date: 'Infrastructure', milestone: 'Private deployment paths keep data, routing, inference, and automation under deliberate control.' }
   ]
 
   return (
     <SectionWrapper background="gradient">
       <div className="max-w-4xl mx-auto text-center">
-        <SectionLabel>ABOUT</SectionLabel>
+        <SectionLabel>FOUNDER</SectionLabel>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-plasma mb-8 leading-tight">
-          AetherPro Technologies
+          Built by an Operator, Not a Slide Deck.
         </h2>
 
         <div className="space-y-6 mb-16">
           <p className="text-lg md:text-xl text-text-muted leading-relaxed">
-            AetherPro Technologies (Est. May 2025) is the architect of AetherOS — a sovereign, composable AI operating system designed for total data ownership and infrastructure independence.
+            AetherPro is founder-operated by CJ Gibson, combining infrastructure discipline with hands-on AI product engineering.
           </p>
           <p className="text-lg md:text-xl text-text-muted leading-relaxed">
-            Cory Gibson is the systems thinker and CTO behind the stack, advancing from Master Electrician to AI Systems Architect to build operational-grade AI infrastructure.
+            The company direction is practical: voice agents that capture revenue, identity systems that bound agent authority, and infrastructure patterns that preserve control.
           </p>
           <p className="text-lg md:text-xl text-text-muted leading-relaxed">
-            Today the focus is on sovereign deployments that deliver AetherOS, agent orchestration, and multimodal intelligence without surrendering control to external clouds.
+            That operator bias matters in security-sensitive environments because reliability, auditability, and ownership are not marketing features. They are operating constraints.
           </p>
         </div>
 
         {/* Velocity Timeline */}
         <div className="border-t border-border-dim pt-8">
           <h3 className="font-heading font-semibold text-xl text-text-plasma mb-8 uppercase tracking-wide">
-            Company Milestones
+            Current Operating Surfaces
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {milestones.map((milestone, index) => (
