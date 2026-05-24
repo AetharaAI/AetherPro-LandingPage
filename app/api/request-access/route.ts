@@ -10,7 +10,6 @@ export async function POST(request: NextRequest) {
       !fullName ||
       !companyName ||
       !primaryUseCase ||
-      !referral ||
       !professionalEmail ||
       !professionalEmail.includes('@')
     ) {

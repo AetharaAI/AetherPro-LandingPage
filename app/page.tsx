@@ -1,6 +1,7 @@
 'use client'
 
 import { HeroSection } from '@/components/sections/hero'
+import { SiteHeader } from '@/components/layout/site-header'
 import { PartnersSection } from '@/components/sections/partners'
 import { DifferenceSection } from '@/components/sections/difference'
 import { SovereignComputeSection } from '@/components/sections/sovereign-compute'
@@ -17,6 +18,7 @@ import { Footer } from '@/components/layout/footer'
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <SiteHeader />
       <HeroSection />
       <PartnersSection />
       <DifferenceSection />

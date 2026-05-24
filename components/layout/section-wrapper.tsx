@@ -24,7 +24,7 @@ export function SectionWrapper({ children, className, background = 'void', id }:
   return (
     <section
       id={id}
-      className={cn('py-20 lg:py-30 px-6 lg:px-8', getBackgroundClasses(), className)}
+      className={cn('scroll-mt-32 px-6 py-20 lg:px-8 lg:py-30', getBackgroundClasses(), className)}
     >
       <div className="max-w-7xl mx-auto">
         {children}

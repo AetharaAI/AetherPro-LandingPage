@@ -23,6 +23,7 @@
 - The current public positioning in source now centers AetherPro on sovereign AI infrastructure for private voice agents, agent identity, secure orchestration, controlled inference, and private deployment paths.
 - Rendered production copy no longer links to BlackBox Audio or frames AetherPro as AetherOS/AetherAI hardware-first.
 - Public product surfaces represented in copy: Syndicate Voice, Passport / APIS, COLLAB, RedWatch, AetherPro Platform, Echo Fleet, and Aether Gateway.
+- Source now includes a Scriber-style persistent glass header, updated AetherPro glyph-plus-wordmark branding, and an on-page request-access form instead of a mailto-only CTA.
 - The repo contains untracked operator-provided folders `TRUTH/` and `master-logos/`.
 - The worktree had pre-existing local deletions under `A3-MINI-BBox/` before this landing page update.
 

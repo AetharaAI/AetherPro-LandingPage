@@ -1,18 +1,7 @@
-import { ShieldLogo } from '@/components/brand/shield-logo'
-import { Wordmark } from '@/components/brand/wordmark'
 import { Button } from '@/components/ui/button'
 import { Network, ShieldCheck, Workflow } from 'lucide-react'
 
 export function HeroSection() {
-  const navItems = [
-    { label: 'Voice Agents', href: '#voice-agents' },
-    { label: 'Passport / APIS', href: '#ecosystem' },
-    { label: 'COLLAB', href: '#ecosystem' },
-    { label: 'RedWatch', href: 'https://redwatch.us' },
-    { label: 'Platform', href: 'https://platform.aetherpro.us' },
-    { label: 'Request Access', href: 'mailto:hello@aetherpro.us' },
-  ]
-
   return (
     <div className="relative min-h-screen overflow-hidden" id="top">
       {/* Background Image with Overlay */}
@@ -24,37 +13,8 @@ export function HeroSection() {
       />
       <div className="absolute inset-0 bg-bg-void/85" />
 
-      {/* Navigation */}
-      <div className="relative z-20 flex flex-col gap-6 px-6 pt-8 pb-4 lg:flex-row lg:items-center lg:justify-between lg:px-12">
-        {/* Left: AetherPro American Infrastructure */}
-        <div className="flex items-center gap-4">
-          <div className="flex flex-col">
-            <Wordmark text="AETHERPRO" size="md" />
-            <span className="text-xs font-mono text-text-dark tracking-wider mt-1">
-              SOVEREIGN AI INFRASTRUCTURE
-            </span>
-          </div>
-          <ShieldLogo size="md" />
-        </div>
-
-        {/* Right: Nav */}
-        <nav className="grid w-full grid-cols-2 gap-3 sm:flex sm:w-auto sm:flex-wrap sm:items-center">
-          {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              target={item.href.startsWith('http') ? '_blank' : undefined}
-              rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className="min-w-0 px-3 py-2 text-center bg-bg-orbital/80 border border-border-bright rounded-md text-xs font-medium text-text-muted hover:text-text-plasma hover:border-accent-voltage/70 transition-all md:px-4 md:text-sm"
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
-      </div>
-
       {/* Main Content - Cinematic Layout */}
-      <div className="relative z-10 px-6 pt-20 lg:px-12 lg:pt-24">
+      <div className="relative z-10 px-6 pb-16 pt-36 lg:px-12 lg:pt-40">
         <div className="grid lg:grid-cols-2 gap-12 items-start min-h-[calc(100vh-200px)]">
           {/* Left Side: Main Content */}
           <div className="flex flex-col justify-center lg:pr-12 max-w-2xl">
@@ -82,7 +42,7 @@ export function HeroSection() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="voltage" size="lg" asChild>
-                <a href="mailto:hello@aetherpro.us">REQUEST ACCESS</a>
+                <a href="#request-access">REQUEST ACCESS</a>
               </Button>
               <Button variant="default" size="lg" asChild>
                 <a href="#architecture">VIEW ARCHITECTURE</a>

@@ -4,24 +4,37 @@ import { useState, type ChangeEvent, type FormEvent } from 'react'
 import { SectionWrapper } from '@/components/layout/section-wrapper'
 import { SectionLabel } from '@/components/ui/section-label'
 import { Input } from '@/components/ui/input'
+import { Select } from '@/components/ui/select'
+import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
 
 const initialForm = {
   fullName: '',
   companyName: '',
   professionalEmail: '',
-  primaryUseCase: '',
-  referral: '',
+  serviceInterest: '',
+  notes: '',
 }
+
+const serviceOptions = [
+  'Syndicate AI Voice Agents',
+  'Passport / APIS Identity',
+  'COLLAB Multi-Agent Coordination',
+  'RedWatch Compliance Readiness',
+  'Managed Private Cloud or Dedicated Deployment',
+  'Other',
+]
 
 export function RequestAccessSection() {
   const [formData, setFormData] = useState(initialForm)
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
   const [message, setMessage] = useState('')
 
-  const handleChange = (field: keyof typeof initialForm) => (event: ChangeEvent<HTMLInputElement>) => {
-    setFormData((prev) => ({ ...prev, [field]: event.target.value }))
-  }
+  const handleChange =
+    (field: keyof typeof initialForm) =>
+    (event: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+      setFormData((prev) => ({ ...prev, [field]: event.target.value }))
+    }
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault()
@@ -32,7 +45,13 @@ export function RequestAccessSection() {
       const response = await fetch('/api/request-access', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          fullName: formData.fullName,
+          companyName: formData.companyName,
+          professionalEmail: formData.professionalEmail,
+          primaryUseCase: formData.serviceInterest,
+          referral: formData.notes,
+        }),
       })
 
       const data = await response.json()
@@ -51,17 +70,17 @@ export function RequestAccessSection() {
 
   return (
     <SectionWrapper>
-      <div className="max-w-5xl mx-auto" id="request-access">
+      <div className="mx-auto max-w-5xl scroll-mt-32" id="request-access">
         <SectionLabel variant="voltage">REQUEST ACCESS</SectionLabel>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-plasma mb-6 leading-tight">
           Request Private AI Access
         </h2>
         <p className="text-lg md:text-xl text-text-muted mb-10 leading-relaxed max-w-3xl">
-          Tell us where voice agents, secure automation, or controlled inference can create leverage.
-          We will follow up with architecture guidance and the right deployment path.
+          Tell us which AetherPro surface you want to evaluate and we will follow up with the right
+          deployment path, architecture guidance, and access steps.
         </p>
 
-        <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-6">
+        <form onSubmit={handleSubmit} className="grid gap-6 md:grid-cols-2">
           <Input
             type="text"
             placeholder="Full Name"
@@ -83,20 +102,21 @@ export function RequestAccessSection() {
             onChange={handleChange('professionalEmail')}
             required
           />
-          <Input
-            type="text"
-            placeholder="Primary Use Case (e.g., after-hours voice intake)"
-            value={formData.primaryUseCase}
-            onChange={handleChange('primaryUseCase')}
-            required
-          />
+          <Select value={formData.serviceInterest} onChange={handleChange('serviceInterest')} required>
+            <option value="" disabled>
+              Service Interested In
+            </option>
+            {serviceOptions.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </Select>
           <div className="md:col-span-2">
-            <Input
-              type="text"
-              placeholder="Referral: How did you hear about AetherPro?"
-              value={formData.referral}
-              onChange={handleChange('referral')}
-              required
+            <Textarea
+              placeholder="What are you trying to solve? Optional context helps us route the request."
+              value={formData.notes}
+              onChange={handleChange('notes')}
             />
           </div>
           <div className="md:col-span-2 flex items-center gap-4">

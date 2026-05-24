@@ -39,6 +39,14 @@ export const metadata: Metadata = {
   authors: [{ name: 'AetherPro Technologies LLC' }],
   creator: 'AetherPro Technologies LLC',
   publisher: 'AetherPro Technologies LLC',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/brand/aetherpro-glyph-32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/brand/aetherpro-glyph-16.png', type: 'image/png', sizes: '16x16' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',

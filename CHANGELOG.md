@@ -1,5 +1,13 @@
 # CHANGELOG.md
 
+## 2026-05-24
+
+### Landing Page
+- Replaced the hero-only navigation with a persistent glass header modeled on the Scriber landing page.
+- Swapped the public brand lockup to the new AetherPro glyph plus wordmark and updated public navigation links to Syndicate Voice, Passport / APIS, COLLAB, RedWatch, Scriber, and the on-page access form.
+- Replaced the mailto request access CTA with a public request form that captures name, company, email, service interest, and optional context.
+- Refreshed favicon and app icon assets to use the A glyph.
+
 ## 2026-05-09
 
 ### Landing Page

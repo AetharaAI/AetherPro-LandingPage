@@ -10,6 +10,7 @@
 ## Production Status
 - Source has been updated for the current AetherPro business direction.
 - Live production verification is pending until the updated branch is pushed and Vercel redeploys.
+- Header refresh, logo swap, favicon update, and request-access form update are now present in source and awaiting deployment verification.
 
 ## Deploy Reality
 - Next.js app using npm scripts.
@@ -28,7 +29,6 @@
 - Passport Alliance public identity surface: `https://passportalliance.org`
 
 ## Remaining Gaps
-- AetherPro logo refresh is pending operator-provided image generation.
 - No SAM.gov/CAGE/UEI values were present in rendered landing page source to preserve or verify.
 - Live browser verification of `https://aetherpro.us` is pending after Vercel redeploy.
 - Platform redirect fix is outside this repo; see `TRUTH.md` Platform Redirect Note.
