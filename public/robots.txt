@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+LLM-Text: https://aetherpro.us/llms.txt
+Sitemap: https://aetherpro.us/sitemap.xml

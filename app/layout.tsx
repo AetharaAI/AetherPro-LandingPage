@@ -17,10 +17,10 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://aetherpro.us'),
   title: {
-    default: 'AetherPro | Sovereign AI Infrastructure for Voice and Agents',
+    default: 'AetherPro | Owned AI Execution Infrastructure',
     template: '%s | AetherPro'
   },
-  description: 'AetherPro builds private AI voice agents, agent identity, secure orchestration, and controlled inference for organizations that need privacy, auditability, and operational reliability.',
+  description: 'AetherPro builds owned AI execution infrastructure — Anchor nodes, PresenceOS, Passport/APIS, RedWatch, VoiceOps, and governed agent systems for organizations that need privacy, auditability, and operational control.',
   keywords: [
     'sovereign AI',
     'AI infrastructure',
@@ -52,8 +52,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://aetherpro.us',
     siteName: 'AetherPro',
-    title: 'AetherPro | Sovereign AI Infrastructure for Voice and Agents',
-    description: 'Private AI voice agents, agent identity, secure orchestration, and controlled inference.',
+    title: 'AetherPro | Owned AI Execution Infrastructure',
+    description: 'Owned AI execution infrastructure for agents, models, workflows, and voice on Anchor nodes running PresenceOS.',
     images: [
       {
         url: '/og-image.png',
@@ -65,8 +65,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AetherPro | Sovereign AI Infrastructure for Voice and Agents',
-    description: 'Private AI voice agents, agent identity, secure orchestration, and controlled inference.',
+    title: 'AetherPro | Owned AI Execution Infrastructure',
+    description: 'Owned AI execution infrastructure for agents, models, workflows, and voice on Anchor nodes running PresenceOS.',
     images: ['/og-image.png']
   },
   robots: {

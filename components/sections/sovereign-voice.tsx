@@ -5,34 +5,37 @@ import { Button } from '@/components/ui/button'
 
 export function SovereignVoiceSection() {
   return (
-    <SectionWrapper background="orbital">
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <SectionWrapper background="orbital" id="voiceops">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
         <div>
-          <SectionLabel variant="voltage">SOVEREIGN VOICE</SectionLabel>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-plasma mb-6 leading-tight">
-            Voice Agents Built Around Business Outcomes
+          <SectionLabel variant="voltage">VOICEOPS</SectionLabel>
+          <h2 className="mb-6 text-3xl font-bold leading-tight text-text-plasma md:text-4xl lg:text-5xl">
+            VoiceOps: First Commercial Workload on Owned Infrastructure
           </h2>
-          <p className="text-lg md:text-xl text-text-muted mb-6 leading-relaxed">
-            Syndicate Voice gives businesses private intake, routing, qualification, and follow-up workflows
-            without forcing every call path through a generic chatbot or public admin surface.
+          <p className="mb-6 text-lg leading-relaxed text-text-muted md:text-xl">
+            VoiceOps is AetherPro&apos;s governed voice automation workload — inbound call handling,
+            intake, qualification, appointment routing, and customer-response workflows running on
+            Anchor nodes through PresenceOS circuits.
           </p>
-          <p className="text-lg md:text-xl text-text-muted mb-8 leading-relaxed">
-            Voice, ASR, TTS, model routing, and workflow execution can be deployed through managed private
-            cloud, customer-controlled cloud, dedicated infrastructure, and future on-prem paths.
+          <p className="mb-8 text-lg leading-relaxed text-text-muted md:text-xl">
+            Voice is the first commercial path, not the whole company. Cloud telephony and CRM tools
+            can still connect through Workflow Bridge when they make sense; VoiceOps owns the
+            execution boundary when privacy, auditability, or customer control matters.
           </p>
           <Button variant="voltage" size="lg" asChild>
             <Link href="/docs#voice-agents">VIEW VOICE ARCHITECTURE</Link>
           </Button>
         </div>
-        <div className="bg-bg-void border border-border-dim rounded-lg p-8">
-          <div className="font-mono text-xs uppercase tracking-[0.25em] text-text-dark mb-4">
-            Technical Edge
+        <div className="rounded-lg border border-border-dim bg-bg-void p-8">
+          <div className="mb-4 font-mono text-xs uppercase tracking-[0.25em] text-text-dark">
+            VoiceOps Capabilities
           </div>
-          <ul className="space-y-4 text-text-muted text-sm">
+          <ul className="space-y-4 text-sm text-text-muted">
             <li>• Inbound and after-hours call coverage</li>
             <li>• Lead capture, qualification, and routing</li>
             <li>• Scoped agent authority through Passport / APIS</li>
-            <li>• Customer-controlled data, routing, and policy enforcement</li>
+            <li>• BYOK/BYO-cloud routing through Workflow Bridge</li>
+            <li>• RedWatch evidence for call-path and agent actions</li>
           </ul>
         </div>
       </div>

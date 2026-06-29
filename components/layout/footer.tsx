@@ -38,11 +38,11 @@ export function Footer() {
             </h4>
             <ul className="space-y-3">
               {[
-                { label: 'Voice Agents / Syndicate', href: '#voice-agents' },
-                { label: 'Passport / APIS', href: '#ecosystem' },
-                { label: 'COLLAB', href: '#ecosystem' },
+                { label: 'Platform / Anchor', href: '#platform' },
+                { label: 'PresenceOS', href: '#presenceos' },
+                { label: 'VoiceOps', href: '#voiceops' },
+                { label: 'Passport / APIS', href: '#passport' },
                 { label: 'RedWatch', href: 'https://redwatch.us' },
-                { label: 'Platform', href: 'https://platform.aetherpro.us' },
                 { label: 'Contact', href: 'mailto:hello@aetherpro.us' },
               ].map((item) => (
                 <li key={item.label}>
@@ -88,7 +88,7 @@ export function Footer() {
               Stay Updated
             </h4>
             <p className="text-text-muted text-sm mb-4 leading-relaxed">
-              Get updates on private AI voice agents, secure automation, and AetherPro deployment paths.
+              Get updates on owned AI execution infrastructure, Anchor nodes, and AetherPro deployment paths.
             </p>
             <form onSubmit={handleSubscribe} className="space-y-3">
               <Input
@@ -121,7 +121,7 @@ export function Footer() {
                 © 2026 AetherPro Technologies LLC. All rights reserved.
               </p>
               <p className="text-text-muted text-xs font-mono">
-                Sovereign AI infrastructure for voice, agents, and secure automation.
+                Owned AI execution infrastructure for agents, models, workflows, and voice.
               </p>
               <p className="text-text-muted text-xs font-mono mt-2">
                 AetherPro does not publicly disclose customer identities or deployment details.

@@ -12,7 +12,8 @@ export function DifferenceSection() {
           Private AI Systems for Real Business Operations
         </h2>
         <p className="text-lg md:text-xl text-text-muted mb-16 max-w-3xl leading-relaxed">
-          AetherPro connects voice automation, agent identity, secure coordination, and controlled inference into one operational infrastructure layer.
+          AetherPro provides a private execution layer for agents, models, workflows, and voice —
+          governed agent infrastructure that coexists with cloud tools when customers need an owned boundary.
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
