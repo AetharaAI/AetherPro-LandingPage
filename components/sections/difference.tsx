@@ -30,7 +30,7 @@ export function DifferenceSection() {
           <FeatureCard
             icon={Network}
             title="Secure Coordination / COLLAB"
-            description="MCP-compatible coordination, task handoff, streams, and agent-to-agent communication with identity enforcement."
+            description="CollabFabric enables MCP-compatible coordination, task handoff, streams, and agent-to-agent communication with identity enforcement."
           />
           <FeatureCard
             icon={Server}

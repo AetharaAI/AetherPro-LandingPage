@@ -8,7 +8,7 @@ export function InfrastructureSection() {
     'Voice, ASR, TTS, and inference service routing',
     'Scoped API keys and product access through AetherPro Platform',
     'Passport / APIS identity for delegated agent authority',
-    'COLLAB task handoff, streams, and MCP-compatible coordination',
+    'CollabFabric task handoff, streams, and MCP-compatible coordination',
     'RedWatch evidence collection and readiness workflows',
     'Managed private cloud and customer-controlled cloud options',
     'Dedicated/private infrastructure paths for qualified deployments',

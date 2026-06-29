@@ -4,7 +4,7 @@ import { SectionLabel } from '@/components/ui/section-label'
 export function FounderSection() {
   const milestones = [
     { date: 'Company', milestone: 'AetherPro Technologies LLC is the operating company behind the public infrastructure and product surfaces.' },
-    { date: 'Voice', milestone: 'Syndicate Voice turns missed calls, intake, qualification, and routing into automated business workflows.' },
+    { date: 'Voice', milestone: 'VoiceOps turns missed calls, intake, qualification, and routing into automated business workflows.' },
     { date: 'Identity', milestone: 'Passport / APIS gives agents scoped authority that can be verified, reviewed, and revoked.' },
     { date: 'Platform', milestone: 'AetherPro Platform centralizes access, product launch surfaces, scoped API keys, usage, and billing.' },
     { date: 'Security', milestone: 'RedWatch packages readiness workflows and evidence support for security-sensitive environments.' },

@@ -5,7 +5,7 @@ export interface SubBrandLogosProps {
 }
 
 export function SubBrandLogos({ className }: SubBrandLogosProps) {
-  const brands = ['Syndicate Voice', 'Passport / APIS', 'COLLAB', 'RedWatch']
+  const brands = ['VoiceOps', 'Passport / APIS', 'COLLAB', 'RedWatch']
 
   return (
     <div className={cn('flex items-center gap-4', className)}>

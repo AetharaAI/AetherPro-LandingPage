@@ -11,7 +11,7 @@ const products = [
   },
   {
     name: 'COLLAB',
-    description: 'MCP-compatible coordination, task handoff, streams, and agent-to-agent communication with identity enforcement.',
+    description: 'CollabFabric provides MCP-compatible coordination, task handoff, streams, and agent-to-agent communication with identity enforcement.',
     link: '/docs#collab',
   },
   {
@@ -25,8 +25,8 @@ const products = [
     link: 'https://platform.aetherpro.us',
   },
   {
-    name: 'Echo Fleet',
-    description: 'Agent fleet and orchestration concept for coordinating specialized agents across secure workflows.',
+    name: 'Anchor Crew',
+    description: 'Passport-issued onboard agents operating inside governed PresenceOS circuits with scoped mandates.',
     link: '/docs#gateway',
   },
 ]
