@@ -12,8 +12,8 @@ export function InfrastructureSection() {
     'RedWatch evidence collection and readiness workflows',
     'Managed private cloud and customer-controlled cloud options',
     'Dedicated/private infrastructure paths for qualified deployments',
-    'CMMC 2.0 / NIST SP 800-171 aligned design',
-    'Auditability, access control, and evidence support without claiming certification',
+    'Architecture designed to support audit, evidence, and control objectives',
+    'Auditability, access control, and evidence trails without claiming certification',
     'Customer-controlled data, model routing, and policy enforcement'
   ]
 

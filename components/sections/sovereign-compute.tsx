@@ -14,10 +14,12 @@ export function SovereignComputeSection() {
               Choose the Control Boundary That Fits the Work.
             </h2>
             <p className="text-lg md:text-xl text-text-muted mb-6 leading-relaxed">
-              AetherPro is designed for managed private cloud, customer-controlled cloud, dedicated private infrastructure, and future on-prem deployment paths.
+              Anchor nodes running PresenceOS can deploy through managed private cloud,
+              customer-controlled cloud, dedicated infrastructure, and on-prem paths as the environment requires.
             </p>
             <p className="text-lg md:text-xl text-text-muted leading-relaxed">
-              The public offer is simple: private AI voice agents and secure automation that preserve data ownership, routing control, and policy enforcement.
+              Cloud tools still fit where they make sense. AetherPro gives customers an owned execution
+              layer when data, model access, auditability, predictable capacity, or customer ownership matters.
             </p>
           </div>
 

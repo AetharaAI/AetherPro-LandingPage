@@ -4,6 +4,9 @@ import { HeroSection } from '@/components/sections/hero'
 import { SiteHeader } from '@/components/layout/site-header'
 import { PartnersSection } from '@/components/sections/partners'
 import { DifferenceSection } from '@/components/sections/difference'
+import { AnchorSection } from '@/components/sections/anchor'
+import { PresenceOSSection } from '@/components/sections/presenceos'
+import { ApprovedModelsSection } from '@/components/sections/approved-models'
 import { SovereignComputeSection } from '@/components/sections/sovereign-compute'
 import { AetherAIStackSection } from '@/components/sections/aetherai-stack'
 import { SovereignVoiceSection } from '@/components/sections/sovereign-voice'
@@ -22,6 +25,9 @@ export default function Home() {
       <HeroSection />
       <PartnersSection />
       <DifferenceSection />
+      <AnchorSection />
+      <PresenceOSSection />
+      <ApprovedModelsSection />
       <SovereignComputeSection />
       <AetherAIStackSection />
       <SovereignVoiceSection />
