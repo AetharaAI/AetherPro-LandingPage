@@ -3,7 +3,7 @@ import Link from 'next/link'
 const sections = [
   {
     id: 'voice-agents',
-    title: 'Voice Agents / Syndicate',
+    title: 'VoiceOps',
     description: 'Private AI voice agents for intake, routing, qualification, after-hours coverage, and revenue capture.',
   },
   {
@@ -14,7 +14,7 @@ const sections = [
   {
     id: 'collab',
     title: 'COLLAB',
-    description: 'MCP-compatible coordination, task handoff, message streams, and secure agent-to-agent communication.',
+    description: 'CollabFabric provides MCP-compatible coordination, task handoff, message streams, and secure agent-to-agent communication.',
   },
   {
     id: 'gateway',

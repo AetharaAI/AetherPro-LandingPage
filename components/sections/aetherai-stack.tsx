@@ -46,7 +46,7 @@ export function AetherAIStackSection() {
             icon={Network}
             name="COLLAB"
             title="Agent Coordination"
-            description="MCP-compatible task handoff, message streams, and agent-to-agent communication with identity enforcement."
+            description="CollabFabric provides MCP-compatible task handoff, message streams, and agent-to-agent communication with identity enforcement."
           />
           <StackComponent
             icon={Radar}

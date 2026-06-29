@@ -7,7 +7,7 @@ export function RoadmapSection() {
     {
       phase: 'LAYER 1',
       title: 'VOICE AGENTS',
-      description: 'Syndicate Voice handles intake, after-hours coverage, lead capture, qualification, and routing for real businesses.',
+      description: 'VoiceOps handles intake, after-hours coverage, lead capture, qualification, and routing for real businesses.',
       status: 'active' as const
     },
     {
@@ -19,7 +19,7 @@ export function RoadmapSection() {
     {
       phase: 'LAYER 3',
       title: 'COORDINATION FABRIC',
-      description: 'COLLAB and Echo Fleet coordinate tasks, messages, tools, and agent-to-agent handoff under identity enforcement.',
+      description: 'CollabFabric and Anchor Crew coordinate tasks, messages, tools, and agent-to-agent handoff under identity enforcement.',
       status: 'thinking' as const
     },
     {

@@ -17,9 +17,9 @@ const initialForm = {
 }
 
 const serviceOptions = [
-  'Syndicate AI Voice Agents',
+  'VoiceOps',
   'Passport / APIS Identity',
-  'COLLAB Multi-Agent Coordination',
+  'CollabFabric Multi-Agent Coordination',
   'RedWatch Compliance Readiness',
   'Managed Private Cloud or Dedicated Deployment',
   'Other',
