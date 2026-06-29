@@ -23,7 +23,7 @@ export function SovereignVoiceSection() {
             execution boundary when privacy, auditability, or customer control matters.
           </p>
           <Button variant="voltage" size="lg" asChild>
-            <Link href="/docs#voice-agents">VIEW VOICE ARCHITECTURE</Link>
+            <Link href="#architecture">VIEW PLATFORM ARCHITECTURE</Link>
           </Button>
         </div>
         <div className="rounded-lg border border-border-dim bg-bg-void p-8">

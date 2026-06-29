@@ -12,7 +12,7 @@ export function HeroSection() {
       />
       <div className="absolute inset-0 bg-bg-void/85" />
 
-      <div className="relative z-10 px-6 pb-16 pt-28 sm:pt-32 lg:px-12 lg:pt-40">
+      <div className="relative z-10 px-6 pb-16 pt-20 md:pt-32 lg:px-12 lg:pt-40">
         <div className="grid min-h-[calc(100vh-12rem)] items-start gap-12 lg:grid-cols-2 lg:min-h-[calc(100vh-200px)]">
           <div className="flex max-w-2xl flex-col justify-center lg:pr-12">
             <div className="mb-6 self-start rounded-md border border-accent-voltage/30 bg-accent-voltage-dim px-4 py-2 sm:mb-8">
