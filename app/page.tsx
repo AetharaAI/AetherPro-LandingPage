@@ -2,6 +2,8 @@
 
 import { HeroSection } from '@/components/sections/hero'
 import { SiteHeader } from '@/components/layout/site-header'
+import { AgentWorkflowSection } from '@/components/sections/agent-workflow'
+import { SystemConnectionSection } from '@/components/sections/system-connection'
 import { PartnersSection } from '@/components/sections/partners'
 import { DifferenceSection } from '@/components/sections/difference'
 import { AnchorSection } from '@/components/sections/anchor'
@@ -23,6 +25,8 @@ export default function Home() {
     <main className="min-h-screen">
       <SiteHeader />
       <HeroSection />
+      <AgentWorkflowSection />
+      <SystemConnectionSection />
       <PartnersSection />
       <DifferenceSection />
       <AnchorSection />

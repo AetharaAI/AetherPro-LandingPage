@@ -7,7 +7,7 @@ AetherPro Technologies LLC
 https://aetherpro.us
 
 ## Preferred Summary
-AetherPro Technologies is a sovereign AI infrastructure company building owned AI execution infrastructure for private AI systems in real business operations.
+AetherPro Technologies builds controlled AI systems for voice, business operations, authenticated agents, private compute, and evidence-backed automation. Sovereign AI infrastructure with owned execution boundaries and agent operations that complete work—not merely generate text.
 
 ## What This Company Builds
 AetherPro provides a private execution layer for agents, models, workflows, and voice automation. The product hierarchy includes:
@@ -25,10 +25,11 @@ AetherPro provides a private execution layer for agents, models, workflows, and 
 
 ## Key Public URLs
 - Homepage: https://aetherpro.us
+- PresenceOS: https://presenceos.us
+- Anchor Systems: https://anchor.presenceos.us
 - Passport Alliance: https://passportalliance.org
 - APIS Documentation: https://docs.passportalliance.org
 - RedWatch: https://redwatch.us
-- Scriber: https://scriber.aetherpro.us
 - Syndicate AI: https://syndicateai.co
 - Voice: https://voice.syndicateai.co
 

@@ -9,8 +9,10 @@
 
 ## Production Status
 - Source has been updated for the current AetherPro business direction.
+- Brand assets refreshed from local canon pack (`aetherpro-canon/Branding/canon-brand-assests`).
+- Agent Operations workflow section and System Connection section added below the hero.
+- Favicon/app icons, OG image, and metadata updated for Facebook-aligned corporate identity.
 - Live production verification is pending until the updated branch is pushed and Vercel redeploys.
-- Header refresh, logo swap, favicon update, and request-access form update are now present in source and awaiting deployment verification.
 
 ## Deploy Reality
 - Next.js app using npm scripts.
@@ -23,9 +25,10 @@
 - This update moved the local repo from `/home/cory/Documents/Triad-Intelligence-TM/AetherPro-LandingPage` to `/home/cory/Aether-Admin-Platform/AetherPro-LandingPage`.
 
 ## Dependencies
-- AetherPro Platform: `https://platform.aetherpro.us`
+- PresenceOS public site: `https://presenceos.us`
+- Anchor Systems public site: `https://anchor.presenceos.us`
 - Public RedWatch site: `https://redwatch.us`
-- Public Syndicate domain observed in admin docs: `https://syndicateai.co`
+- Public Syndicate site: `https://syndicateai.co`
 - Passport Alliance public identity surface: `https://passportalliance.org`
 
 ## Remaining Gaps

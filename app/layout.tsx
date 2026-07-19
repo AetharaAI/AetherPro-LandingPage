@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
@@ -14,13 +14,20 @@ const jetbrainsMono = JetBrains_Mono({
   variable: '--font-mono',
 })
 
+export const viewport: Viewport = {
+  themeColor: '#0B0A10',
+  width: 'device-width',
+  initialScale: 1,
+}
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://aetherpro.us'),
   title: {
-    default: 'AetherPro | Owned AI Execution Infrastructure',
-    template: '%s | AetherPro'
+    default: 'AetherPro Technologies | Sovereign AI Infrastructure and Agent Operations',
+    template: '%s | AetherPro Technologies',
   },
-  description: 'AetherPro builds owned AI execution infrastructure — Anchor nodes, PresenceOS, Passport/APIS, RedWatch, VoiceOps, and governed agent systems for organizations that need privacy, auditability, and operational control.',
+  description:
+    'AetherPro builds controlled AI systems for voice, business operations, authenticated agents, private compute, and evidence-backed automation.',
   keywords: [
     'sovereign AI',
     'AI infrastructure',
@@ -29,50 +36,61 @@ export const metadata: Metadata = {
     'agent identity',
     'APIS',
     'Passport Alliance',
-    'MCP orchestration',
+    'authenticated agents',
+    'owned execution',
     'self-hosted AI',
-    'AI agents',
     'controlled inference',
     'data sovereignty',
-    'secure automation'
+    'secure automation',
+    'evidence-backed automation',
   ],
   authors: [{ name: 'AetherPro Technologies LLC' }],
   creator: 'AetherPro Technologies LLC',
   publisher: 'AetherPro Technologies LLC',
+  applicationName: 'AetherPro',
+  alternates: {
+    canonical: 'https://aetherpro.us',
+  },
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
-      { url: '/brand/aetherpro-glyph-32.png', type: 'image/png', sizes: '32x32' },
-      { url: '/brand/aetherpro-glyph-16.png', type: 'image/png', sizes: '16x16' },
+      { url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
+      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
+      { url: '/icon-512.png', type: 'image/png', sizes: '512x512' },
     ],
     apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+    shortcut: ['/favicon.ico'],
   },
+  manifest: '/site.webmanifest',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://aetherpro.us',
-    siteName: 'AetherPro',
-    title: 'AetherPro | Owned AI Execution Infrastructure',
-    description: 'Owned AI execution infrastructure for agents, models, workflows, and voice on Anchor nodes running PresenceOS.',
+    siteName: 'AetherPro Technologies',
+    title: 'AetherPro Technologies | Sovereign AI Infrastructure and Agent Operations',
+    description:
+      'AetherPro builds controlled AI systems for voice, business operations, authenticated agents, private compute, and evidence-backed automation.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'AetherPro - Sovereign AI Infrastructure'
-      }
-    ]
+        alt: 'AetherPro — Sovereign AI systems for voice, operations, agents, and controlled infrastructure',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AetherPro | Owned AI Execution Infrastructure',
-    description: 'Owned AI execution infrastructure for agents, models, workflows, and voice on Anchor nodes running PresenceOS.',
-    images: ['/og-image.png']
+    title: 'AetherPro Technologies | Sovereign AI Infrastructure and Agent Operations',
+    description:
+      'AetherPro builds controlled AI systems for voice, business operations, authenticated agents, private compute, and evidence-backed automation.',
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
-    follow: true
-  }
+    follow: true,
+  },
 }
 
 export default function RootLayout({

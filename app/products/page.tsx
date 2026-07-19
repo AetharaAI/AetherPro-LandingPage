@@ -20,14 +20,14 @@ const products = [
     link: 'https://redwatch.us',
   },
   {
-    name: 'AetherPro Platform',
-    description: 'Authenticated control plane for product access, scoped API keys, usage, billing, and launch surfaces.',
-    link: 'https://platform.aetherpro.us',
+    name: 'PresenceOS',
+    description: 'Composed operator environment for identity, agents, workflows, models, and automation under customer control.',
+    link: 'https://presenceos.us',
   },
   {
-    name: 'Anchor Crew',
-    description: 'Passport-issued onboard agents operating inside governed PresenceOS circuits with scoped mandates.',
-    link: '/docs#gateway',
+    name: 'Anchor Systems',
+    description: 'Controlled AI infrastructure deployments that run PresenceOS at the edge, on premises, or in private cloud.',
+    link: 'https://anchor.presenceos.us',
   },
 ]
 

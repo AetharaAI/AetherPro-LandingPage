@@ -1,5 +1,16 @@
 # CHANGELOG.md
 
+## 2026-07-19
+
+### Landing Page
+- Synced public brand assets to the local AetherPro canon glyph/wordmark pack (metallic A glyph matching Facebook identity).
+- Header uses combined `AetherPro-Brand-Icon-Wordmark` lockup; footer/icons use `Metalic-A-AetherPro`.
+- Regenerated favicon, apple-touch, PWA icons, and Open Graph preview from the metallic A glyph and Canon wordmark.
+- Added Agent Operations outcome section directly below the hero (six-stage governed workflow).
+- Added compact System Connection architecture-to-outcome map (PresenceOS, Passport/APIS, Collab Fabric, Polymorph, VoiceOps, RedWatch, Anchor Systems).
+- Updated page title, meta description, canonical URL, Open Graph/Twitter cards, and site.webmanifest for sovereign infrastructure + agent operations positioning.
+- Refreshed header/footer nav after Azure migration: PresenceOS (`presenceos.us`), Anchor Systems (`anchor.presenceos.us`), Syndicate (`syndicateai.co`); removed Scriber and Platform nav targets.
+
 ## 2026-05-24
 
 ### Landing Page

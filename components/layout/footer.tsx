@@ -1,8 +1,7 @@
 'use client'
 
+import Image from 'next/image'
 import { useState } from 'react'
-import { ShieldLogo } from '@/components/brand/shield-logo'
-import { Wordmark } from '@/components/brand/wordmark'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 
@@ -22,10 +21,20 @@ export function Footer() {
     <footer className="bg-bg-void border-t border-border-dim py-16 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Column 1 - Logo & Tagline */}
+          {/* Column 1 - Metallic A glyph & tagline */}
           <div className="lg:col-span-1">
-            <ShieldLogo size="md" className="mb-4" />
-            <Wordmark text="AETHERPRO" size="md" />
+            <a href="#top" className="inline-block">
+              <Image
+                src="/brand/aetherpro-glyph-192.png"
+                width={72}
+                height={72}
+                alt="AetherPro"
+                className="mb-4 h-16 w-16 object-contain sm:h-[4.5rem] sm:w-[4.5rem]"
+              />
+            </a>
+            <p className="font-heading text-lg font-bold uppercase tracking-[0.15em] text-text-plasma">
+              AetherPro
+            </p>
             <p className="text-sm text-text-muted mt-2 font-mono uppercase tracking-wider">
               Sovereign AI Infrastructure
             </p>
@@ -38,9 +47,9 @@ export function Footer() {
             </h4>
             <ul className="space-y-3">
               {[
-                { label: 'Platform / Anchor', href: '#platform' },
-                { label: 'PresenceOS', href: '#presenceos' },
-                { label: 'VoiceOps', href: '#voiceops' },
+                { label: 'PresenceOS', href: 'https://presenceos.us' },
+                { label: 'Anchor Systems', href: 'https://anchor.presenceos.us' },
+                { label: 'Syndicate', href: 'https://syndicateai.co' },
                 { label: 'Passport / APIS', href: '#passport' },
                 { label: 'RedWatch', href: 'https://redwatch.us' },
                 { label: 'Contact', href: 'mailto:hello@aetherpro.us' },
@@ -48,7 +57,13 @@ export function Footer() {
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    target={item.href.startsWith('http') ? '_blank' : undefined}
+                    target={
+                      item.href.startsWith('http') || item.href.startsWith('mailto:')
+                        ? item.href.startsWith('http')
+                          ? '_blank'
+                          : undefined
+                        : undefined
+                    }
                     rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                     className="text-text-muted hover:text-text-plasma transition-colors duration-150 text-sm"
                   >
@@ -101,20 +116,20 @@ export function Footer() {
               <Button type="submit" variant="voltage" className="w-full">
                 SUBSCRIBE
               </Button>
-              {subscribed && (
-                <p className="text-status-active text-xs font-mono">
-                  Subscribed successfully!
-                </p>
-              )}
+              {subscribed ? (
+                <p className="text-status-active text-xs font-mono">Subscribed successfully!</p>
+              ) : null}
             </form>
           </div>
         </div>
 
-        {/* Bottom Row */}
         <div className="border-t border-border-dim pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2 text-text-muted text-sm">
-              <span>Deployment ecosystem: managed private cloud, customer-controlled cloud, dedicated infrastructure, and future on-prem options.</span>
+              <span>
+                Deployment ecosystem: managed private cloud, customer-controlled cloud, dedicated
+                infrastructure, and future on-prem options.
+              </span>
             </div>
             <div className="text-center md:text-right">
               <p className="text-text-muted text-xs font-mono mb-1">
@@ -124,8 +139,9 @@ export function Footer() {
                 Owned AI execution infrastructure for agents, models, workflows, and voice.
               </p>
               <p className="text-text-muted text-xs font-mono mt-2">
-                AetherPro does not publicly disclose customer identities or deployment details.
-                Our infrastructure is engineered for environments where discretion, sovereignty, and control are paramount.
+                AetherPro does not publicly disclose customer identities or deployment details. Our
+                infrastructure is engineered for environments where discretion, sovereignty, and
+                control are paramount.
               </p>
               <p className="text-text-muted text-xs font-mono mt-2">
                 SAM.gov Registered • CAGE Code: 174V7 • UEI: HQ89HRQKF9H5

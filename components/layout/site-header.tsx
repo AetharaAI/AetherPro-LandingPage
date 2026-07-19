@@ -5,11 +5,11 @@ import { Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 const navItems = [
-  { label: 'Platform', href: '#platform', external: false },
-  { label: 'VoiceOps', href: '#voiceops', external: false },
+  { label: 'PresenceOS', href: 'https://presenceos.us', external: true },
+  { label: 'Anchor Systems', href: 'https://anchor.presenceos.us', external: true },
+  { label: 'Syndicate', href: 'https://syndicateai.co', external: true },
   { label: 'Passport / APIS', href: '#passport', external: false },
   { label: 'RedWatch', href: 'https://redwatch.us', external: true },
-  { label: 'Scriber', href: 'https://scriber.aetherpro.us', external: true },
   { label: 'Request Access', href: '#request-access', external: false, accent: true },
 ]
 
@@ -30,21 +30,13 @@ export function SiteHeader() {
       {/* Mobile: compact 64px bar + attached dropdown */}
       <div className="relative md:hidden">
         <div className="flex h-16 max-h-16 items-center justify-between border-b border-white/10 bg-[rgba(10,18,29,0.96)] px-4 backdrop-blur-md">
-          <a href="#top" className="flex min-w-0 items-center gap-2.5" onClick={closeMenu}>
+          <a href="#top" className="flex min-w-0 items-center" onClick={closeMenu}>
             <Image
-              src="/brand/aetherpro-glyph-96.png"
-              width={28}
-              height={28}
-              alt="AetherPro glyph"
-              className="h-7 w-7 flex-none object-contain"
-              priority
-            />
-            <Image
-              src="/brand/aetherpro-wordmark-512.png"
-              width={200}
-              height={44}
-              alt="AetherPro"
-              className="h-4 w-auto max-w-[7.75rem] object-contain"
+              src="/brand/aetherpro-header-lockup-480.png"
+              width={480}
+              height={131}
+              alt="AetherPro — Sovereign AI systems for voice, operations, agents, and controlled infrastructure"
+              className="h-10 w-auto max-w-[min(17rem,72vw)] object-contain object-left"
               priority
             />
           </a>
@@ -101,32 +93,19 @@ export function SiteHeader() {
 
       {/* Desktop: pill header */}
       <div className="hidden px-4 pt-4 sm:px-6 md:block">
-        <div className="mx-auto flex max-w-6xl items-center justify-between rounded-[22px] border border-white/10 bg-[rgba(10,18,29,0.84)] px-6 py-4 shadow-[0_20px_50px_rgba(0,0,0,0.24)] backdrop-blur-xl">
-          <a href="#top" className="flex min-w-0 items-center gap-3">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 rounded-[22px] border border-white/10 bg-[rgba(10,18,29,0.84)] px-5 py-3 shadow-[0_20px_50px_rgba(0,0,0,0.24)] backdrop-blur-xl lg:px-6">
+          <a href="#top" className="flex min-w-0 shrink items-center">
             <Image
-              src="/brand/aetherpro-glyph-96.png"
-              width={40}
-              height={40}
-              alt="AetherPro glyph"
-              className="h-10 w-10 flex-none object-contain"
+              src="/brand/aetherpro-header-lockup.png"
+              width={800}
+              height={218}
+              alt="AetherPro — Sovereign AI systems for voice, operations, agents, and controlled infrastructure"
+              className="h-12 w-auto max-w-[min(22rem,36vw)] object-contain object-left lg:h-14 lg:max-w-[min(24rem,40vw)]"
               priority
             />
-            <div className="min-w-0">
-              <Image
-                src="/brand/aetherpro-wordmark-512.png"
-                width={260}
-                height={57}
-                alt="AetherPro"
-                className="h-7 w-auto max-w-full object-contain"
-                priority
-              />
-              <span className="mt-1 block text-[0.74rem] text-[#8ba0b8]">
-                sovereign AI infrastructure
-              </span>
-            </div>
           </a>
 
-          <nav className="flex items-center gap-2 text-sm text-[#c8d7e6] lg:gap-3">
+          <nav className="flex flex-none items-center gap-1.5 text-sm text-[#c8d7e6] lg:gap-3">
             {navItems.map((item) => (
               <a
                 key={item.label}
@@ -134,7 +113,7 @@ export function SiteHeader() {
                 target={item.external ? '_blank' : undefined}
                 rel={item.external ? 'noopener noreferrer' : undefined}
                 className={[
-                  'rounded-xl border px-3 py-2 transition-all lg:px-4',
+                  'rounded-xl border px-2.5 py-2 transition-all lg:px-4',
                   item.accent
                     ? 'border-white/15 bg-white/5 text-text-plasma hover:border-accent-voltage/60 hover:text-text-plasma'
                     : 'border-transparent text-[#c8d7e6] hover:border-white/12 hover:bg-white/[0.03] hover:text-text-plasma',

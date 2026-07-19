@@ -6,36 +6,37 @@ export interface ShieldLogoProps {
   className?: string
 }
 
+/** Metallic A glyph (Metalic-A-AetherPro) — site icon for footer and compact brand marks. */
 export function ShieldLogo({ size = 'md', className }: ShieldLogoProps) {
   const getSrcAndDimensions = () => {
     switch (size) {
       case 'sm':
         return {
-          src: '/logos/shield-48.png',
+          src: '/brand/aetherpro-glyph-64.png',
           width: 48,
           height: 48,
         }
       case 'md':
         return {
-          src: '/logos/shield-192.png',
+          src: '/brand/aetherpro-glyph-96.png',
           width: 64,
           height: 64,
         }
       case 'lg':
         return {
-          src: '/logos/shield-256.png',
+          src: '/brand/aetherpro-glyph-192.png',
           width: 120,
           height: 120,
         }
       case 'xl':
         return {
-          src: '/logos/shield-512.png',
+          src: '/brand/aetherpro-glyph-512.png',
           width: 160,
           height: 160,
         }
       default:
         return {
-          src: '/logos/shield-192.png',
+          src: '/brand/aetherpro-glyph-96.png',
           width: 64,
           height: 64,
         }
@@ -49,10 +50,9 @@ export function ShieldLogo({ size = 'md', className }: ShieldLogoProps) {
       src={src}
       width={width}
       height={height}
-      alt="AetherPro Shield Logo"
+      alt="AetherPro"
       className={cn('object-contain', className)}
       priority
-      unoptimized={true}
     />
   )
 }
