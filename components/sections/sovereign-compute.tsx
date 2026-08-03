@@ -14,8 +14,9 @@ export function SovereignComputeSection() {
               Choose the Control Boundary That Fits the Work.
             </h2>
             <p className="text-lg md:text-xl text-text-muted mb-6 leading-relaxed">
-              Anchor nodes running PresenceOS can deploy through managed private cloud,
-              customer-controlled cloud, dedicated infrastructure, and on-prem paths as the environment requires.
+              Anchor Systems running PresenceOS can deploy through managed private cloud,
+              customer-controlled cloud, dedicated infrastructure, and on-premises estates as the
+              environment requires.
             </p>
             <p className="text-lg md:text-xl text-text-muted leading-relaxed">
               Cloud tools still fit where they make sense. AetherPro gives customers an owned execution
@@ -39,7 +40,7 @@ export function SovereignComputeSection() {
             />
             <StatCard
               value="04"
-              label="FUTURE ON-PREM OPTIONS"
+              label="ON-PREMISES ANCHOR SYSTEMS"
             />
           </div>
         </div>

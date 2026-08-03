@@ -22,26 +22,27 @@ export function HeroSection() {
             </div>
 
             <h1 className="mb-6 text-3xl font-bold leading-tight text-text-plasma sm:text-4xl md:text-5xl lg:text-6xl">
-              Owned AI Execution for Voice, Agents, Models, and{' '}
-              <span className="text-accent-voltage">Secure Automation</span>
+              Extraordinary infrastructure for{' '}
+              <span className="text-accent-voltage">controlled intelligence</span>
             </h1>
 
             <p className="mb-4 text-base leading-relaxed text-text-muted sm:text-lg md:text-xl">
-              AetherPro builds private AI systems for organizations that need control over identity,
-              data, model access, workflow execution, and operational evidence.
+              AetherPro Technologies designs and operates sovereign AI systems spanning hardware,
+              operating environments, identity, model execution, agents, voice, memory, and
+              operational evidence.
             </p>
 
             <p className="mb-8 text-sm leading-relaxed text-text-muted sm:text-base md:text-lg">
-              Run cloud tools when they make sense. Own the execution boundary when privacy,
-              auditability, capacity, or customer control matters.
+              Own the infrastructure that runs your intelligence across on-premises Anchor Systems,
+              customer-controlled cloud, dedicated infrastructure, and hybrid sovereign estates.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
               <Button variant="voltage" size="lg" asChild>
-                <a href="#request-access">REQUEST ACCESS</a>
+                <a href="https://presenceos.us/architecture">EXPLORE THE ARCHITECTURE</a>
               </Button>
               <Button variant="default" size="lg" asChild>
-                <a href="#architecture">VIEW ARCHITECTURE</a>
+                <a href="#request-access">DISCUSS A DEPLOYMENT</a>
               </Button>
             </div>
           </div>
@@ -49,17 +50,17 @@ export function HeroSection() {
           <div className="mt-8 lg:mt-24 lg:pl-8">
             <div className="rounded-lg border border-border-dim bg-bg-orbital p-6 shadow-card sm:p-8 lg:p-10">
               <div className="mb-6 font-mono text-xs uppercase tracking-[0.35em] text-text-dark sm:text-sm">
-                VoiceOps • Identity • Anchor Nodes • Workflow Bridge
+                VoiceOps • PresenceOS • Anchor Systems • Operational Evidence
               </div>
 
               <div className="mb-8 space-y-4 border-l border-border-dim pl-6 sm:mb-10 sm:space-y-5">
                 <p className="text-sm leading-relaxed text-text-muted sm:text-base">
-                  Governed agent infrastructure with predictable owned capacity instead of
-                  vendor-imposed rate limits.
+                  Extraordinary infrastructure for organizations that require ownership, policy
+                  enforcement, identity, recoverability, and controlled model execution.
                 </p>
                 <p className="text-sm leading-relaxed text-text-muted sm:text-base">
                   Images are shipped, models are mounted, manifests are governed. Passport Alliance
-                  issues and governs APIS identities; Anchor nodes verify and enforce them.
+                  issues and governs APIS identities; Anchor Systems verify and enforce them.
                 </p>
               </div>
 
@@ -81,7 +82,7 @@ export function HeroSection() {
                     icon: Server,
                     label: 'Anchor + PresenceOS',
                     value:
-                      'Private AI node appliances running a composed operating environment for models, agents, workflows, and audit.',
+                      'Controlled infrastructure deployments running a governed operating environment for models, agents, workflows, memory, and audit.',
                   },
                   {
                     icon: Workflow,

@@ -49,9 +49,10 @@ export function Footer() {
               {[
                 { label: 'PresenceOS', href: 'https://presenceos.us' },
                 { label: 'Anchor Systems', href: 'https://anchor.presenceos.us' },
-                { label: 'Syndicate', href: 'https://syndicateai.co' },
+                { label: 'VoiceOps', href: 'https://syndicateai.co' },
                 { label: 'Passport / APIS', href: '#passport' },
                 { label: 'RedWatch', href: 'https://redwatch.us' },
+                { label: 'Research', href: 'https://presenceos.us/research' },
                 { label: 'Contact', href: 'mailto:hello@aetherpro.us' },
               ].map((item) => (
                 <li key={item.label}>
@@ -103,7 +104,8 @@ export function Footer() {
               Stay Updated
             </h4>
             <p className="text-text-muted text-sm mb-4 leading-relaxed">
-              Get updates on owned AI execution infrastructure, Anchor nodes, and AetherPro deployment paths.
+              Get updates on controlled intelligence infrastructure, Anchor Systems, PresenceOS,
+              and deployment paths.
             </p>
             <form onSubmit={handleSubscribe} className="space-y-3">
               <Input
@@ -127,8 +129,8 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2 text-text-muted text-sm">
               <span>
-                Deployment ecosystem: managed private cloud, customer-controlled cloud, dedicated
-                infrastructure, and future on-prem options.
+                Deployment ecosystem: on-premises Anchor Systems, customer-controlled cloud,
+                dedicated infrastructure, and hybrid sovereign estates.
               </span>
             </div>
             <div className="text-center md:text-right">

@@ -17,14 +17,14 @@ export function AnchorSection() {
   return (
     <SectionWrapper background="orbital" id="platform">
       <div className="mx-auto max-w-6xl">
-        <SectionLabel variant="voltage">ANCHOR NODES</SectionLabel>
+        <SectionLabel variant="voltage">ANCHOR SYSTEMS</SectionLabel>
         <h2 className="mb-6 text-3xl font-bold leading-tight text-text-plasma md:text-4xl lg:text-5xl">
-          Anchor Nodes: Owned AI Capacity You Can Deploy
+          Anchor Systems: Governed infrastructure, not a dressed-up workstation
         </h2>
         <p className="mb-12 max-w-3xl text-lg leading-relaxed text-text-muted md:text-xl">
-          Anchor is the hardware-backed AetherPro node appliance. PresenceOS runs on Anchor and turns
-          the box into a private AI operating environment for model serving, agents, identity, audit,
-          voice, and workflow automation.
+          Anchor Systems are sovereign AI appliances built around distinct execution and authority
+          domains. One domain runs models, agents, voice, memory, and workflows; the other governs
+          identity, policy, evidence, network authority, recovery, and revocation.
         </p>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

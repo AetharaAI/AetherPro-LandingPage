@@ -13,8 +13,8 @@ export function AetherAIStackSection() {
           Owned AI Execution Infrastructure Across the Full Stack
         </h2>
         <p className="mx-auto mb-16 max-w-3xl text-lg leading-relaxed text-text-muted md:text-xl">
-          AetherPro is the parent sovereign AI infrastructure company behind Anchor nodes, PresenceOS,
-          Passport/APIS, RedWatch, Faraday, VoiceOps, and Workflow Bridge.
+          AetherPro is the parent sovereign AI infrastructure company behind Anchor Systems,
+          PresenceOS, Passport/APIS, RedWatch, Faraday, VoiceOps, and Workflow Bridge.
         </p>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -22,7 +22,7 @@ export function AetherAIStackSection() {
             icon={Server}
             name="ANCHOR + PRESENCEOS"
             title="Private Execution Layer"
-            description="Hardware-backed node appliances running PresenceOS for models, agents, workflows, voice, and audit."
+            description="Governed infrastructure deployments running PresenceOS for models, agents, workflows, voice, and audit."
           />
           <StackComponent
             icon={Bot}
@@ -69,7 +69,7 @@ export function AetherAIStackSection() {
             passport anchored by DNS TXT proof and validated against published issuer keys.
           </p>
           <p className="mt-4 text-sm text-text-dark">
-            Standard Anchor nodes verify and enforce passports. Issuance remains controlled by
+            Standard Anchor Systems verify and enforce passports. Issuance remains controlled by
             AetherPro or delegated issuers through{' '}
             <Link
               href="https://passportalliance.org"

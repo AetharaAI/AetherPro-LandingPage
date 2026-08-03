@@ -1,5 +1,13 @@
 # CHANGELOG.md
 
+## 2026-08-03
+
+### Landing Page
+- Repositioned the hero around "extraordinary infrastructure for controlled intelligence" and changed the main CTAs to architecture exploration plus deployment discussion.
+- Replaced rendered `Anchor Nodes` language with `Anchor Systems`, updated deployment language, and tightened the governed-infrastructure framing across the hero, system map, products, footer, and PresenceOS summary.
+- Updated public navigation labels to `VoiceOps` and added `Research`.
+- Rewrote `public/llms.txt` around the current AetherPro canon, company status, and canonical site responsibilities.
+
 ## 2026-07-19
 
 ### Landing Page

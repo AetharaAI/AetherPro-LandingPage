@@ -9,11 +9,12 @@ export function PresenceOSSection() {
       <div className="mx-auto max-w-6xl">
         <SectionLabel>PRESENCEOS</SectionLabel>
         <h2 className="mb-6 text-3xl font-bold leading-tight text-text-plasma md:text-4xl lg:text-5xl">
-          PresenceOS: The Operating Environment for Private AI Workloads
+          PresenceOS: Governed on the outside. Alive on the inside.
         </h2>
         <p className="mb-16 max-w-3xl text-lg leading-relaxed text-text-muted md:text-xl">
-          PresenceOS composes AetherPro services into one deployable environment: identity, model
-          serving, agents, coordination, audit, voice, and operator control.
+          PresenceOS places a continuously inspectable and adaptable operational environment inside
+          a hardened authority boundary so authorized humans and agents can evolve workflows,
+          models, tools, and services through typed, validated, and reversible changes.
         </p>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">

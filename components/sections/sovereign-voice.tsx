@@ -15,7 +15,7 @@ export function SovereignVoiceSection() {
           <p className="mb-6 text-lg leading-relaxed text-text-muted md:text-xl">
             VoiceOps is AetherPro&apos;s governed voice automation workload — inbound call handling,
             intake, qualification, appointment routing, and customer-response workflows running on
-            Anchor nodes through PresenceOS circuits.
+            Anchor Systems through PresenceOS circuits.
           </p>
           <p className="mb-8 text-lg leading-relaxed text-text-muted md:text-xl">
             Voice is the first commercial path, not the whole company. Cloud telephony and CRM tools

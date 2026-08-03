@@ -7,9 +7,10 @@ import { useEffect, useState } from 'react'
 const navItems = [
   { label: 'PresenceOS', href: 'https://presenceos.us', external: true },
   { label: 'Anchor Systems', href: 'https://anchor.presenceos.us', external: true },
-  { label: 'Syndicate', href: 'https://syndicateai.co', external: true },
+  { label: 'VoiceOps', href: 'https://syndicateai.co', external: true },
   { label: 'Passport / APIS', href: '#passport', external: false },
   { label: 'RedWatch', href: 'https://redwatch.us', external: true },
+  { label: 'Research', href: 'https://presenceos.us/research', external: true },
   { label: 'Request Access', href: '#request-access', external: false, accent: true },
 ]
 

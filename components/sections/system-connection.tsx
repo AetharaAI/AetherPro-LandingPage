@@ -40,9 +40,9 @@ const systems = [
   },
   {
     name: 'Anchor Systems',
-    role: 'Owned execution infrastructure',
+    role: 'Governed execution infrastructure',
     detail:
-      'Private compute and controlled infrastructure for organizations that need an owned boundary.',
+      'Controlled infrastructure with distinct authority and execution domains for organizations that need an owned operational boundary.',
   },
 ]
 
@@ -83,8 +83,8 @@ export function SystemConnectionSection() {
         </div>
 
         <p className="mt-8 max-w-3xl text-sm leading-relaxed text-text-dark">
-          Sovereign deployment, private compute, and auditable outcomes where control matters.
-          Cloud tools remain available when they make sense.
+          Controlled deployment, governed model execution, and auditable outcomes where ownership
+          matters. Cloud tools remain available when they make sense.
         </p>
       </div>
     </SectionWrapper>

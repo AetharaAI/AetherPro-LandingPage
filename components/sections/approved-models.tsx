@@ -12,9 +12,9 @@ export function ApprovedModelsSection() {
               Approved Model Distribution
             </h2>
             <p className="text-lg leading-relaxed text-text-muted md:text-xl">
-              Anchor nodes should not pull arbitrary public models directly. AetherPro&apos;s model
-              registry pattern validates model bundles, publishes approved manifests, and lets
-              PresenceOS load only approved model slots.
+              Anchor Systems should not pull arbitrary public models directly. AetherPro&apos;s
+              model registry pattern validates model bundles, publishes approved manifests, and
+              lets PresenceOS load only approved model slots.
             </p>
           </div>
 

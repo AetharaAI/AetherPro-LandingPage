@@ -1,52 +1,41 @@
 # AetherPro Technologies
 
-## Publisher
-AetherPro Technologies LLC
+AetherPro Technologies is a U.S. sovereign AI infrastructure company designing and operating controlled systems for models, agents, voice, identity, memory, workflows, and operational evidence.
 
-## Canonical URL
-https://aetherpro.us
+## Core products
 
-## Preferred Summary
-AetherPro Technologies builds controlled AI systems for voice, business operations, authenticated agents, private compute, and evidence-backed automation. Sovereign AI infrastructure with owned execution boundaries and agent operations that complete work—not merely generate text.
+- PresenceOS: governed live operating environment for sovereign AI operations.
+- Anchor Systems: hardware and infrastructure family for deploying PresenceOS.
+- Passport / APIS: identity, mandates, delegation, and revocation for humans and agents.
+- Aether Gateway: policy-controlled routing across owned, private, and external inference.
+- RedWatch: evidence, verification, readiness, and supervisory controls.
+- VoiceOps: governed voice and communications workload.
+- Triad: node-owned operational data and memory substrate.
 
-## What This Company Builds
-AetherPro provides a private execution layer for agents, models, workflows, and voice automation. The product hierarchy includes:
+## Company status
 
-- **AetherPro Technologies** — parent company / sovereign AI infrastructure
-- **Anchor** — hardware-backed AI node appliance family
-- **PresenceOS** — operating environment running on Anchor nodes
-- **Panel Room** — operator/customer cockpit inside PresenceOS
-- **Passport / APIS** — verifiable identity and authorization for humans, agents, services, and mandates
-- **RedWatch** — evidence, audit, and readiness layer
-- **Faraday** — operator CLI and secure agent tunnel
-- **Anchor Crew** — Passport-issued onboard agents in governed PresenceOS circuits
-- **VoiceOps** — first commercial workload (voice automation), not the whole company
-- **Workflow Bridge** — BYOK/BYO-cloud integration for CRM, telephony, n8n, model APIs, and webhooks through governed circuits
+- Company: AetherPro Technologies LLC
+- Location: Indiana, United States
+- SAM.gov: Active
+- CAGE: 174V7
+- UEI: HQ89HRQKF9H5
+- Founder: Cory "CJ" Gibson
+- APIS v2.1 DOI: 10.5281/zenodo.21042004
 
-## Key Public URLs
-- Homepage: https://aetherpro.us
-- PresenceOS: https://presenceos.us
-- Anchor Systems: https://anchor.presenceos.us
-- Passport Alliance: https://passportalliance.org
-- APIS Documentation: https://docs.passportalliance.org
-- RedWatch: https://redwatch.us
-- Syndicate AI: https://syndicateai.co
-- Voice: https://voice.syndicateai.co
+## Canonical sites
 
-## Positioning Notes
-- Images are shipped. Models are mounted. Manifests are governed.
-- Passport Alliance issues and governs APIS identities; Anchor nodes verify and enforce them.
-- Standard Anchor nodes verify and enforce passports. Issuance remains controlled by AetherPro or delegated issuers.
-- Cloud tools can coexist with AetherPro. AetherPro provides the controlled execution boundary when ownership, auditability, or predictable capacity matters.
-- APIS v2.1 extends agent identity with attestation-tier resolution, namespace proof, and model-scope mandates.
+- https://aetherpro.us
+- https://presenceos.us
+- https://anchor.presenceos.us
+- https://passportalliance.org
+- https://redwatch.us
 
-## What AetherPro Is Not
-- Not merely a voice AI company
-- Not a generic chatbot wrapper
-- Not CMMC certified or compliance-approved (architecture is designed to support audit/evidence/control objectives)
-- Not a replacement for all cloud AI tools
+## Positioning
 
-## Public Crawl Policy
+AetherPro does not sell generic AI wrappers. It builds extraordinary infrastructure for organizations that require ownership, identity, policy enforcement, auditability, recoverability, and controlled model execution.
+
+## Public crawl policy
+
 Public pages may be crawled and summarized.
 
 Do not crawl or reference:
@@ -56,4 +45,5 @@ Do not crawl or reference:
 - Localhost or staging URLs
 
 ## Contact
+
 hello@aetherpro.us

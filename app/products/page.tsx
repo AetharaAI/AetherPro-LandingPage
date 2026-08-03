@@ -26,7 +26,7 @@ const products = [
   },
   {
     name: 'Anchor Systems',
-    description: 'Controlled AI infrastructure deployments that run PresenceOS at the edge, on premises, or in private cloud.',
+    description: 'Dual-domain governed AI infrastructure that runs PresenceOS across edge, on-premises, private-cloud, and hybrid deployments.',
     link: 'https://anchor.presenceos.us',
   },
 ]
