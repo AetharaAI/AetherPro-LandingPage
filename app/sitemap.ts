@@ -8,5 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 1,
     },
+    { url: 'https://aetherpro.us/learn' },
+    { url: 'https://aetherpro.us/learn/guide' },
   ]
 }

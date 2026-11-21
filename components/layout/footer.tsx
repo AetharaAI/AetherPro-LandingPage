@@ -53,6 +53,7 @@ export function Footer() {
                 { label: 'Passport / APIS', href: '#passport' },
                 { label: 'RedWatch', href: 'https://redwatch.us' },
                 { label: 'Research', href: 'https://presenceos.us/research' },
+                { label: 'Own Your AI', href: '/learn' },
                 { label: 'Contact', href: 'mailto:hello@aetherpro.us' },
               ].map((item) => (
                 <li key={item.label}>
