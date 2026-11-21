@@ -91,10 +91,13 @@ export default function LearnPage() {
           <article id="private-ai" className={styles.card}>
             <h3>Anchor Systems and private AI</h3>
             <p>Ask AetherPro about your deployment goals, operating responsibilities, and the boundaries your workflow requires. Keep the first email high-level and leave out credentials and private records.</p>
-            <a className={styles.secondary} href="mailto:hello@aetherpro.us?subject=Anchor%20Systems%20deployment%20inquiry">Email about a private deployment</a>
+            <div className={styles.actions}>
+              <a className={styles.secondary} href="https://presenceos.us/deployment/">Open the deployment assessment</a>
+              <a className={styles.textLink} href="mailto:hello@aetherpro.us?subject=Anchor%20Systems%20deployment%20inquiry">Email about a private deployment</a>
+            </div>
           </article>
         </div>
-        <p className={styles.contact}>Both links open your email app with <strong>hello@aetherpro.us</strong> as the recipient.</p>
+        <p className={styles.contact}>Email links open your email app with <strong>hello@aetherpro.us</strong> as the recipient.</p>
       </section>
     </>
   )
