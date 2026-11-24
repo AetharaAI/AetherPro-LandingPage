@@ -29,6 +29,7 @@ export default function GuidePage() {
       <p className={styles.eyebrow}>Own Your AI · Free starter guide</p>
       <h1>{title}</h1>
       <p className={styles.lede}>Use this guide to prepare for a vendor conversation, choose a first project, and decide what your team needs to control.</p>
+      <p className={styles.printHint}>To keep a copy, open your browser’s print menu and choose Save as PDF if available.</p>
       <nav className={styles.lessonNav} aria-label="Guide contents">
         <ol>{contents.map(([id, label]) => <li key={id}><a href={'#' + id}>{label}</a></li>)}</ol>
       </nav>

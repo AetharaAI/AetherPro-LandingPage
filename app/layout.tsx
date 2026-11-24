@@ -21,7 +21,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://aetherpro.us'),
+  metadataBase: new URL('https://www.aetherpro.us'),
   title: {
     default: 'AetherPro Technologies | Sovereign AI Infrastructure and Agent Operations',
     template: '%s | AetherPro Technologies',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   publisher: 'AetherPro Technologies LLC',
   applicationName: 'AetherPro',
   alternates: {
-    canonical: 'https://aetherpro.us',
+    canonical: 'https://www.aetherpro.us',
   },
   icons: {
     icon: [
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://aetherpro.us',
+    url: 'https://www.aetherpro.us',
     siteName: 'AetherPro Technologies',
     title: 'AetherPro Technologies | Sovereign AI Infrastructure and Agent Operations',
     description:

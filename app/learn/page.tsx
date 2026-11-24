@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Assessment } from './assessment'
+import { DeploymentComparison } from './deployment-comparison'
+import { EducationFaq } from './faq'
 import { lessons } from './lessons'
 import styles from './learn.module.css'
 
@@ -27,17 +29,22 @@ export default function LearnPage() {
             <a className={styles.secondary} href="#lessons">Explore the lessons</a>
           </div>
         </div>
-        <aside className={styles.heroCard} aria-labelledby="compare-title">
-          <h2 id="compare-title">Four ways to run AI</h2>
+        <aside className={styles.heroCard} aria-labelledby="overview-title">
+          <h2 id="overview-title">Four ways to run AI</h2>
           <dl className={styles.approaches}>
             <div><dt>Subscription AI</dt><dd>Use a provider’s application.</dd></div>
             <div><dt>Hosted agents</dt><dd>Delegate a workflow within defined permissions.</dd></div>
             <div><dt>Private deployment</dt><dd>Run AI inside a specified environment.</dd></div>
             <div><dt>Customer-owned infrastructure</dt><dd>Own the equipment and assign operating responsibility.</dd></div>
           </dl>
-          <a className={styles.textLink} href="/learn/guide">Read the free starter guide</a>
+          <div className={styles.heroLinks}>
+            <a className={styles.textLink} href="#compare">Compare deployment models</a>
+            <a className={styles.textLink} href="/learn/guide">Read the free starter guide</a>
+          </div>
         </aside>
       </section>
+
+      <DeploymentComparison />
 
       <section id="lessons" className={styles.section} aria-labelledby="lessons-title">
         <p className={styles.eyebrow}>The course</p>
@@ -80,12 +87,19 @@ export default function LearnPage() {
         <Assessment />
       </section>
 
+      <EducationFaq />
+
       <section id="next-steps" className={styles.section} aria-labelledby="next-title">
         <h2 id="next-title">Explore a next step</h2>
         <div className={styles.cards}>
           <article id="website-ai" className={styles.card}>
             <h3>AI business websites</h3>
-            <p>Scope a website around approved answers, a callback or inquiry flow, and a clear handoff to your team. Ask what the package covers, who owns the site and domain, and what ongoing support costs.</p>
+            <p>Ask AetherPro which website package fits your goal and what ongoing support covers. Bring a short list of the features you need.</p>
+            <ul className={styles.packageScope}>
+              <li>Service pages and an inquiry or callback flow.</li>
+              <li>Answers drawn from approved business content, with a handoff to your team.</li>
+              <li>Optional needs to discuss, such as booking or CRM routing, and who would operate them.</li>
+            </ul>
             <a className={styles.secondary} href="mailto:hello@aetherpro.us?subject=AI%20business%20website%20inquiry">Email about a website package</a>
           </article>
           <article id="private-ai" className={styles.card}>

@@ -123,3 +123,45 @@
 @media (prefers-reduced-motion: reduce) {
   .shell *, .shell *::before, .shell *::after { animation: none; transition: none; }
 }
+
+.heroLinks { display: flex; flex-wrap: wrap; column-gap: 1rem; }
+.comparison, .faq { display: grid; gap: .75rem; align-items: start; }
+.comparison, .faq { margin-block-start: 1rem; }
+.faq { max-width: 54rem; }
+.disclosure {
+  border: 1px solid var(--border-dim, #2a2a35);
+  background: var(--bg-orbital, #15151e);
+  border-radius: var(--radius-lg, 12px);
+}
+.disclosure[open] { border-color: #58828b; }
+.disclosure summary {
+  min-height: 48px;
+  padding: .85rem 1rem;
+  cursor: pointer;
+  color: var(--learn-cyan);
+}
+.disclosure summary:hover { background: #20323c; }
+.disclosure summary span { display: block; color: var(--learn-copy); margin-block-start: .25rem; }
+.comparisonFields {
+  display: grid;
+  gap: .8rem;
+  padding: .9rem 1rem 1rem;
+  border-top: 1px solid var(--border-dim, #2a2a35);
+}
+.faq .disclosure p { padding: 0 1rem; }
+.packageScope { margin-block: 0 1rem; color: var(--learn-copy); }
+
+@media (min-width: 48rem) {
+  .comparison { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media print {
+  .shell, .shell .guide { background: #fff; color: #171717; }
+  .shell .guide :is(h1, h2, p, dt, dd) { color: #171717; }
+  .shell .guide { max-width: none; padding: 0; font-size: 11pt; }
+  .shell .guide h1 { font-size: 25pt; }
+  .shell .guide h2 { font-size: 16pt; break-after: avoid; }
+  .shell .guide :is(li, dt, dd) { break-inside: avoid; }
+  .shell .guide .section { padding-block: 1rem; border-color: #ccc; }
+  .shell:has(.guide) :is(.skip, .header, .footer, .lessonNav, .printHint, .actions) { display: none; }
+}

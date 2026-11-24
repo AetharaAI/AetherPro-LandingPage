@@ -4,7 +4,7 @@
 
 The corporate site is [AetharaAI/AetherPro-LandingPage](https://github.com/AetharaAI/AetherPro-LandingPage). Name.com provides authoritative DNS, and Vercel serves the apex redirect and the `www` site. The live homepage matched source at base commit `8ae3c3cdb7dc9583975b2869246e176589946916`, which carries a successful Vercel GitHub check for `cjs-projects-41b19a79/aether-pro-landing-page`. `app/` is the Next.js App Router, `package-lock.json` pins npm dependencies, and `next.config.js` sets standalone output. Vercel project settings live outside the repository. The root Docker Compose file describes a separate inference stack and is unrelated to this release.
 
-The hub uses the approved ice-blue education logo, site-level typography and surface tokens, route-scoped styles, and public HTML. The assessment runs in memory only. Visitor contact is optional and initiates in the visitor’s mail app. The website package uses the address published on the corporate site. The private AI path links to the existing [PresenceOS deployment assessment](https://presenceos.us/deployment/) and offers the same corporate inbox as an alternative. The assessment page and its form were verified as reachable. Form submission, mailbox delivery, and a package checkout were not verified. The starter guide is HTML only. Aethara and Aether use text because no approved role-matched character art was confirmed.
+The hub uses the approved ice-blue education logo, site-level typography and surface tokens, route-scoped styles, and public HTML. The assessment runs in memory only. Visitor contact is optional and initiates in the visitor’s mail app. The website package uses the address published on the corporate site. The private AI path links to the existing [PresenceOS deployment assessment](https://presenceos.us/deployment/) and offers the same corporate inbox as an alternative. The assessment page and its form were verified as reachable. Form submission, mailbox delivery, and a package checkout were not verified. The starter guide is ungated HTML with a browser print layout. The site serves no prebuilt PDF. Aethara and Aether use text because no approved role-matched character art was confirmed.
 
 ### Deployment and rollback
 
@@ -15,7 +15,7 @@ The hub uses the approved ice-blue education logo, site-level typography and sur
 
 ## Release verification
 
-The release branch pins Next.js 15.5.29 and uses the matching Next.js ESLint rules. Re-run the full lockfile build and nine recommendation cases on the reviewed commit. Verify both education canonical URLs and sitemap entries use the serving `www.aetherpro.us` hostname. See the [Next.js security release](https://nextjs.org/blog/november-2026-security-release).
+The release branch pins Next.js 15.5.29 and uses the matching Next.js ESLint rules. Re-run the full lockfile build and nine recommendation cases on the reviewed commit. Verify canonicals, sitemap entries, and the robots sitemap directive use the serving `www.aetherpro.us` hostname. Next.js pins an older PostCSS dependency, so the lockfile overrides it to the patched project version. Run `npm audit` with the full lockfile and revisit the override when the framework no longer needs it. See the [Next.js security release](https://nextjs.org/blog/november-2026-security-release).
 
 ## Future BOF ingestion contract
 
