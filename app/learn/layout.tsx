@@ -9,8 +9,8 @@ export default function LearnLayout({ children }: { children: ReactNode }) {
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <a href="/" className={styles.brand}>
-            <Image src="/brand/aetherpro-header-lockup-480.png" width={480} height={131}
-              alt="AetherPro Technologies home" unoptimized />
+            <Image src="/brand/aetherpro-education-ice-blue.webp" width={624} height={182}
+              alt="AetherPro Technologies home" loading="eager" fetchPriority="high" unoptimized />
           </a>
           <nav aria-label="Education" className={styles.nav}>
             <a href="/learn#lessons">Lessons</a>

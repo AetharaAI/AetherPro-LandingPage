@@ -31,7 +31,7 @@
 .footer { border-top: 1px solid var(--border-dim, #2a2a35); }
 .headerInner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .25rem 1rem; padding-block: .65rem; }
 .brand { display: inline-flex; min-height: 44px; align-items: center; }
-.brand img { display: block; width: min(13rem, 65vw); height: auto; }
+.brand img { display: block; width: clamp(11rem, 49vw, 13rem); max-width: 100%; height: auto; }
 .nav { display: flex; flex-wrap: wrap; gap: 0 .25rem; }
 .nav a, .footer a { display: inline-flex; min-height: 44px; align-items: center; padding-inline: .45rem; font-size: .9375rem; }
 .nav a:hover, .footer a:hover { color: var(--learn-cyan); text-decoration: underline; }
@@ -108,6 +108,11 @@
 .guide { max-width: 75ch; margin-inline: auto; padding-block: clamp(2.75rem, 7vw, 5rem); }
 .guide h1 { font-size: clamp(2.15rem, 5vw, 3.8rem); }
 .guideApproaches { display: grid; gap: .85rem; margin-bottom: 1rem; }
+
+@media (max-width: 37.5rem) {
+  .header .headerInner { gap: 0; padding-block: .5rem .25rem; }
+  .header .nav { flex-basis: 100%; }
+}
 
 @media (min-width: 48rem) {
   .container, .headerInner { width: min(100% - 4rem, 72rem); }
