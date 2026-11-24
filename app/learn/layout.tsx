@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import type { ReactNode } from 'react'
 import styles from './learn.module.css'
 
@@ -8,10 +9,10 @@ export default function LearnLayout({ children }: { children: ReactNode }) {
       <a href="#learn-main" className={styles.skip}>Skip to content</a>
       <header className={styles.header}>
         <div className={styles.headerInner}>
-          <a href="/" className={styles.brand}>
+          <Link href="/" className={styles.brand}>
             <Image src="/brand/aetherpro-education-ice-blue.webp" width={624} height={182}
               alt="AetherPro Technologies home" loading="eager" fetchPriority="high" unoptimized />
-          </a>
+          </Link>
           <nav aria-label="Education" className={styles.nav}>
             <a href="/learn#lessons">Lessons</a>
             <a href="/learn#assessment">Assessment</a>
@@ -24,7 +25,7 @@ export default function LearnLayout({ children }: { children: ReactNode }) {
         <div className={styles.headerInner}>
           <span>AetherPro Technologies</span>
           <a href="/learn">Own Your AI</a>
-          <a href="/">Corporate home</a>
+          <Link href="/">Corporate home</Link>
         </div>
       </footer>
     </div>

@@ -9,8 +9,8 @@ const description = 'Understand the differences between subscription AI, hosted 
 export const metadata: Metadata = {
   title,
   description,
-  alternates: { canonical: 'https://aetherpro.us/learn' },
-  openGraph: { title, description, url: 'https://aetherpro.us/learn', type: 'website', images: ['/og-image.png'] },
+  alternates: { canonical: 'https://www.aetherpro.us/learn' },
+  openGraph: { title, description, url: 'https://www.aetherpro.us/learn', type: 'website', images: ['/og-image.png'] },
   twitter: { card: 'summary_large_image', title, description, images: ['/og-image.png'] },
 }
 

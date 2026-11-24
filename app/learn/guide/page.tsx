@@ -3,7 +3,7 @@ import styles from '../learn.module.css'
 
 const title = 'The Business Owner’s Guide to AI Ownership & Control'
 const description = 'A free procurement and deployment guide for business owners evaluating subscription, hosted, private, and customer-owned AI.'
-const canonical = 'https://aetherpro.us/learn/guide'
+const canonical = 'https://www.aetherpro.us/learn/guide'
 
 export const metadata: Metadata = {
   title,
