@@ -1,6 +1,7 @@
 'use client'
 
 import { HeroSection } from '@/components/sections/hero'
+import { EducationSection } from '@/components/sections/education'
 import { SiteHeader } from '@/components/layout/site-header'
 import { AgentWorkflowSection } from '@/components/sections/agent-workflow'
 import { SystemConnectionSection } from '@/components/sections/system-connection'
@@ -25,6 +26,7 @@ export default function Home() {
     <main className="min-h-screen">
       <SiteHeader />
       <HeroSection />
+      <EducationSection />
       <AgentWorkflowSection />
       <SystemConnectionSection />
       <PartnersSection />
